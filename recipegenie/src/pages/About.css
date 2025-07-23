@@ -1,0 +1,231 @@
+/* Neon Dark Aesthetic for About Page */
+
+.about-page {
+  background: #181a20;
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem 1rem;
+  background: linear-gradient(90deg, #181a20 60%, #232946 100%);
+}
+.about-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.neon-text {
+  color: #00ffd0;
+  text-shadow: 0 0 8px #00ffd088, 0 0 16px #00ffd044;
+}
+.about-hero-sub {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Journey Timeline */
+.about-journey {
+  margin: 3rem auto 2rem auto;
+  max-width: 900px;
+  text-align: center;
+}
+.about-journey h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.about-journey-sub {
+  color: #b0b0b0;
+  margin-bottom: 2rem;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.timeline-year {
+  min-width: 60px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+.neon-pill {
+  background: #00ffd0;
+  color: #181a20;
+  border-radius: 20px;
+  padding: 0.3em 1em;
+  box-shadow: 0 0 8px #00ffd088;
+  font-weight: 700;
+}
+.timeline-content h3 {
+  margin: 0 0 0.2em 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.timeline-content p {
+  margin: 0;
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+/* Mission & Vision */
+.about-mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 3rem auto 2rem auto;
+  max-width: 900px;
+}
+.card {
+  background: #232946;
+  border-radius: 18px;
+  box-shadow: 0 0 16px #00ffd022;
+  padding: 2rem 1.5rem;
+  flex: 1 1 320px;
+  min-width: 280px;
+  color: #e0e0e0;
+}
+.icon-mission::before {
+  content: '\25CE';
+  color: #00ffd0;
+  margin-right: 0.5em;
+}
+.icon-vision::before {
+  content: '\1F441';
+  color: #00ffd0;
+  margin-right: 0.5em;
+}
+
+/* Values */
+.about-values {
+  margin: 3rem auto 2rem auto;
+  max-width: 900px;
+  text-align: center;
+}
+.about-values h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+.about-values-sub {
+  color: #b0b0b0;
+  margin-bottom: 2rem;
+}
+.values-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.value-card {
+  background: #232946;
+  border-radius: 16px;
+  box-shadow: 0 0 12px #00ffd022;
+  padding: 1.5rem 1rem;
+  min-width: 220px;
+  max-width: 260px;
+  flex: 1 1 220px;
+  color: #e0e0e0;
+}
+.icon-value {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5em;
+}
+.icon-value.health::before {
+  content: '\2665';
+  color: #00ff99;
+}
+.icon-value.innovation::before {
+  content: '\1F4A1';
+  color: #00bfff;
+}
+.icon-value.accessibility::before {
+  content: '\1F464';
+  color: #b366ff;
+}
+
+/* Team */
+.about-team {
+  margin: 3rem auto 2rem auto;
+  max-width: 1100px;
+  text-align: center;
+}
+.about-team h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+.about-team-sub {
+  color: #b0b0b0;
+  margin-bottom: 2rem;
+}
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.team-card {
+  background: #232946;
+  border-radius: 16px;
+  box-shadow: 0 0 12px #00ffd022;
+  padding: 1.5rem 1rem;
+  min-width: 220px;
+  max-width: 260px;
+  flex: 1 1 220px;
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+  border: 2px solid #00ffd0;
+  box-shadow: 0 0 8px #00ffd088;
+}
+.team-role {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  display: block;
+}
+.team-tag {
+  background: #00ffd0;
+  color: #181a20;
+  border-radius: 12px;
+  padding: 0.2em 0.8em;
+  font-size: 0.9em;
+  margin-top: 0.7em;
+  font-weight: 600;
+  box-shadow: 0 0 8px #00ffd088;
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .about-mission-vision, .values-grid, .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline {
+    align-items: stretch;
+  }
+} 
