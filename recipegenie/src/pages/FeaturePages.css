@@ -19,7 +19,7 @@
   letter-spacing: 1px;
 }
 .neon-green {
-  color: #baff39;
+  color: #dfe6f3;
   text-shadow: 0 0 12px #baff3988, 0 0 24px #baff3944;
 }
 .neon-pink {
@@ -46,13 +46,13 @@
   align-items: center;
 }
 .feature-card h2 {
-  color: #baff39;
+  color: #5b5bdf;
   margin-bottom: 1em;
 }
 .feature-input {
   background: #181a20;
   color: #e0e0fa;
-  border: 1.5px solid #baff39;
+  border: 1.5px solid #94a3e7;
   border-radius: 8px;
   padding: 0.7em 1em;
   font-size: 1em;
@@ -62,7 +62,7 @@
   margin-right: 0.5em;
 }
 .feature-btn-gradient {
-  background: linear-gradient(90deg, #baff39 0%, #39ffb0 100%);
+  background: linear-gradient(90deg, #1d72db 0%, #39ffb0 100%);
   color: #181a20;
   border: none;
   border-radius: 8px;
@@ -82,7 +82,7 @@
 .feature-btn-outline {
   background: none;
   color: #baff39;
-  border: 1.5px solid #baff39;
+  border: 1.5px solid #5d89d7;
   border-radius: 8px;
   padding: 0.7em 1.5em;
   font-weight: 700;
@@ -391,11 +391,11 @@
   margin: 2em 0 2em 0;
 }
 .recipe-filter-card {
-  background: #181a20;
+  background: #050914;
   border-radius: 14px;
   box-shadow: 0 0 12px #00ffd044;
   padding: 1.2em 2em 1.2em 2em;
-  color: #e0e0fa;
+  color: #37377f;
   min-width: 260px;
   display: flex;
   flex-direction: column;
@@ -416,24 +416,26 @@
   padding: 0 1em;
 }
 .recipe-card {
-  background: #181a20;
+  background: #905f5f;
   border-radius: 22px;
-  box-shadow: 0 0 0px #00eaff00, 0 0 0px #00eaff00;
+  box-shadow: 0 4px 32px 0 #0ff0fc22, 0 1.5px 0 #232946;
   padding: 0 0 1.5em 0;
-  color: #e0e0fa;
+  color: #7fdfff;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   min-width: 280px;
   max-width: 370px;
   margin: 0 auto;
-  transition: box-shadow 0.25s, border 0.25s;
+  transition: box-shadow 0.25s, border 0.25s, transform 0.18s;
   position: relative;
   overflow: hidden;
+  font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, Helvetica, sans-serif;
 }
 .recipe-card:hover {
-  box-shadow: 0 0 24px 2px #00eaffcc, 0 0 48px 8px #00eaff33;
-  border: 1.5px solid #00eaff;
+  box-shadow: 0 0 32px 2px #38e8ffcc, 0 0 48px 8px #38e8ff33;
+  border: 1.5px solid #38e8ff;
+  transform: translateY(-4px) scale(1.01);
   z-index: 2;
 }
 .recipe-img {
@@ -462,20 +464,27 @@
 .recipe-badge {
   font-size: 1em;
   font-weight: 600;
-  border-radius: 16px;
-  padding: 0.2em 1em;
-  color: #181a20;
-  background: #38e8ff;
+  border-radius: 999px;
+  padding: 0.2em 1.2em;
+  color: #3e66c3;
+  background: #000e10;
   box-shadow: 0 0 8px #38e8ff88;
   position: absolute;
   top: 18px;
   right: 18px;
   z-index: 3;
+  letter-spacing: 0.02em;
 }
 .recipe-ingredients-list {
-  color: #baffff;
+  color: #7fdfff;
   font-size: 1em;
   margin: 0.5em 1.2em 0.7em 1.2em;
+  font-family: inherit;
+}
+.recipe-description {
+  color: #7fdfff;
+  font-size: 1em;
+  margin: 0.2em 1.2em 0.7em 1.2em;
   font-family: inherit;
 }
 .recipe-macros {
@@ -492,12 +501,15 @@
   align-items: center;
   font-size: 1em;
   font-weight: 500;
+  color: #38e8ff;
+  margin-right: 0.7em;
 }
-.recipe-macros span:nth-child(1) { color: #ffb347; }
-.recipe-macros span:nth-child(2) { color: #38e8ff; }
-.recipe-macros span:nth-child(3) { color: #39ff14; }
-.recipe-macros span:nth-child(4) { color: #b366ff; }
-.recipe-macros span:nth-child(5) { color: #38e8ff; }
+.recipe-macros .macro-cal { color: #ffb347; }
+.recipe-macros .macro-time { color: #38e8ff; }
+.recipe-macros .macro-protein { color: #39ff14; }
+.recipe-macros .macro-carbs { color: #b366ff; }
+.recipe-macros .macro-fat { color: #38e8ff; }
+.recipe-macros .macro-serves { color: #7fdfff; }
 .feature-btn-gradient {
   background: linear-gradient(90deg, #38e8ff 0%, #b366ff 100%);
   color: #fff;
@@ -519,15 +531,13 @@
 }
 .feature-btn-gradient:hover {
   background: linear-gradient(90deg, #38e8ff 0%, #b366ff 100%);
-  color: #181a20;
+  color: #121212;
   box-shadow: 0 0 24px #38e8ffcc, 0 0 48px #b366ff44;
 }
-.badge-weightloss { background: #39ffb0; color: #181a20; }
-.badge-weightgain { background: #00bfff; color: #181a20; }
-.badge-familymeal { background: #ffe066; color: #181a20; }
-.badge-quicksnack { background: #ff5eae; color: #fff; }
-.badge-lessoil { background: #baff39; color: #181a20; }
-.badge-easytomake { background: #baff39; color: #181a20; }
+.badge-weightloss, .badge-weightgain, .badge-familymeal, .badge-quicksnack, .badge-lessoil, .badge-easytomake {
+  background: #000b0d !important;
+  color: #121212 !important;
+}
 @media (max-width: 900px) {
   .recipe-filters-row {
     flex-direction: column;
