@@ -282,6 +282,38 @@
   box-shadow: 0 0 8px #39ffb088;
   display: inline-block;
 }
+.grocery-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em 2em;
+  margin: 1.5em 0 1em 0;
+}
+.grocery-list-checkbox {
+  display: flex;
+  align-items: center;
+  background: #181a20;
+  border-radius: 10px;
+  padding: 0.7em 1.2em;
+  color: #e0e0fa;
+  font-size: 1.1em;
+  box-shadow: 0 0 8px #00ffd044;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border: 2px solid transparent;
+}
+.grocery-list-checkbox input[type="checkbox"] {
+  margin-right: 1em;
+  accent-color: #baff39;
+  width: 1.2em;
+  height: 1.2em;
+}
+.grocery-list-checkbox.checked {
+  background: #232946;
+  color: #baff39;
+  border: 2px solid #baff39;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
 
 .achievements-section {
   margin: 2.5em auto 1.5em auto;
@@ -339,6 +371,9 @@
   .achievement-card2 {
     padding: 1em 1em;
   }
+  .grocery-list-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 900px) {
@@ -346,5 +381,103 @@
     flex-direction: column;
     gap: 1em;
     align-items: center;
+  }
+} 
+
+.recipe-filters-row {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  margin: 2em 0 2em 0;
+}
+.recipe-filter-card {
+  background: #181a20;
+  border-radius: 14px;
+  box-shadow: 0 0 12px #00ffd044;
+  padding: 1.2em 2em 1.2em 2em;
+  color: #e0e0fa;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.filter-title {
+  color: #baff39;
+  font-weight: 700;
+  margin-bottom: 0.7em;
+  font-size: 1.1em;
+}
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto 2.5em auto;
+  padding: 0 1em;
+}
+.recipe-card {
+  background: #181a20;
+  border-radius: 16px;
+  box-shadow: 0 0 16px #00ffd022;
+  padding: 1.5em 1em 1.5em 1em;
+  color: #e0e0fa;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 240px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.recipe-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.7em;
+}
+.recipe-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+.recipe-title {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.recipe-badge {
+  font-size: 0.9em;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.2em 0.8em;
+  margin-left: 0.7em;
+  color: #181a20;
+  background: #baff39;
+  box-shadow: 0 0 8px #baff3988;
+}
+.badge-weightloss { background: #39ffb0; color: #181a20; }
+.badge-weightgain { background: #00bfff; color: #181a20; }
+.badge-familymeal { background: #ffe066; color: #181a20; }
+.badge-quicksnack { background: #ff5eae; color: #fff; }
+.badge-lessoil { background: #baff39; color: #181a20; }
+.badge-easytomake { background: #baff39; color: #181a20; }
+.recipe-macros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em 1.2em;
+  margin-bottom: 1em;
+  color: #baff39;
+  font-size: 1em;
+}
+@media (max-width: 900px) {
+  .recipe-filters-row {
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+  }
+  .recipe-grid {
+    grid-template-columns: 1fr;
   }
 } 
