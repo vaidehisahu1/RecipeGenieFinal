@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Blog.css';
+import './Home.css';
 
 const categories = [
   'All',
@@ -102,88 +104,132 @@ export default function Blog() {
   const featured = articles.find((a) => a.featured);
 
   return (
-    <div className="blog-page">
-      {/* Hero Banner */}
-      <section className="blog-hero">
-        <h1>
-          Health & Nutrition <span className="neon-text">Insights Blog</span>
-        </h1>
-        <p className="blog-hero-sub">
-          Expert insights, cutting-edge research, and <span className="highlight">practical tips</span> to elevate your health journey
-        </p>
-      </section>
-
-      {/* Featured Article */}
-      {featured && (
-        <section className="featured-article">
-          <h2>Featured Article</h2>
-          <div className="featured-card">
-            <img src={featured.image} alt={featured.title} className="featured-img" />
-            <div className="featured-content">
-              <span className="article-category">{featured.category}</span>
-              <h3>{featured.title}</h3>
-              <p>{featured.excerpt}</p>
+    <div className="home-bg">
+      <header className="navbar">
+        <div className="navbar-left">
+          <span className="logo-icon">&#128717;</span>
+          <span className="logo-text">RecipeGenie</span>
+        </div>
+        <nav className="navbar-center">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/services" className="nav-link">Services</Link>
+          <Link to="/blog" className="nav-link active">Blog</Link>
+        </nav>
+        <div className="navbar-right">
+          <Link to="/login" className="login-btn">Login</Link>
+          <Link to="/signup" className="signup-btn">Sign Up</Link>
+        </div>
+      </header>
+      <div className="blog-page">
+        {/* Hero Banner */}
+        <section className="blog-hero">
+          <h1>
+            Health & Nutrition <span className="neon-text">Insights Blog</span>
+          </h1>
+          <p className="blog-hero-sub">
+            Expert insights, cutting-edge research, and <span className="highlight">practical tips</span> to elevate your health journey
+          </p>
+        </section>
+        {/* Featured Article */}
+        {featured && (
+          <section className="featured-article">
+            <h2>Featured Article</h2>
+            <div className="featured-card">
+              <img src={featured.image} alt={featured.title} className="featured-img" />
+              <div className="featured-content">
+                <span className="article-category">{featured.category}</span>
+                <h3>{featured.title}</h3>
+                <p>{featured.excerpt}</p>
+                <div className="article-meta">
+                  <span>👤 {featured.author}</span>
+                  <span>📅 {featured.date}</span>
+                  <span>⏱ {featured.readTime}</span>
+                </div>
+                <div className="article-tags">
+                  {featured.tags.map((tag) => (
+                    <span className="tag" key={tag}>{tag}</span>
+                  ))}
+                </div>
+                <a href={featured.link} className="read-btn">Read Full Article →</a>
+              </div>
+            </div>
+          </section>
+        )}
+        {/* Filter Bar */}
+        <div className="blog-filter-bar">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={selectedCategory === cat ? 'active' : ''}
+              onClick={() => setSelectedCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+        {/* Article Grid */}
+        <div className="blog-articles-grid">
+          {filteredArticles.map((article) => (
+            <div className="blog-article-card" key={article.id}>
+              <img src={article.image} alt={article.title} className="article-img" />
+              <span className="article-category">{article.category}</span>
+              <h4>{article.title}</h4>
+              <p>{article.excerpt}</p>
               <div className="article-meta">
-                <span>👤 {featured.author}</span>
-                <span>📅 {featured.date}</span>
-                <span>⏱ {featured.readTime}</span>
+                <span>👤 {article.author}</span>
+                <span>📅 {article.date}</span>
+                <span>⏱ {article.readTime}</span>
               </div>
               <div className="article-tags">
-                {featured.tags.map((tag) => (
+                {article.tags.map((tag) => (
                   <span className="tag" key={tag}>{tag}</span>
                 ))}
               </div>
-              <a href={featured.link} className="read-btn">Read Full Article →</a>
+              <a href={article.link} className="read-link">Read More →</a>
             </div>
-          </div>
+          ))}
+        </div>
+        {/* Newsletter Signup */}
+        <section className="newsletter-section">
+          <h2>Stay Updated with Health Insights</h2>
+          <p>Get the latest articles, research, and tips delivered directly to your inbox</p>
+          <form className="newsletter-form" onSubmit={e => e.preventDefault()}>
+            <input type="email" placeholder="Enter your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
         </section>
-      )}
-
-      {/* Filter Bar */}
-      <div className="blog-filter-bar">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            className={selectedCategory === cat ? 'active' : ''}
-            onClick={() => setSelectedCategory(cat)}
-          >
-            {cat}
-          </button>
-        ))}
       </div>
-
-      {/* Article Grid */}
-      <div className="blog-articles-grid">
-        {filteredArticles.map((article) => (
-          <div className="blog-article-card" key={article.id}>
-            <img src={article.image} alt={article.title} className="article-img" />
-            <span className="article-category">{article.category}</span>
-            <h4>{article.title}</h4>
-            <p>{article.excerpt}</p>
-            <div className="article-meta">
-              <span>👤 {article.author}</span>
-              <span>📅 {article.date}</span>
-              <span>⏱ {article.readTime}</span>
-            </div>
-            <div className="article-tags">
-              {article.tags.map((tag) => (
-                <span className="tag" key={tag}>{tag}</span>
-              ))}
-            </div>
-            <a href={article.link} className="read-link">Read More →</a>
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-brand">
+            <div className="footer-logo neon-gradient">RecipeGenie</div>
+            <div className="footer-desc">Pioneering the future with cutting-edge technology solutions that illuminate possibilities.</div>
+            <div className="footer-socials"></div>
           </div>
-        ))}
-      </div>
-
-      {/* Newsletter Signup */}
-      <section className="newsletter-section">
-        <h2>Stay Updated with Health Insights</h2>
-        <p>Get the latest articles, research, and tips delivered directly to your inbox</p>
-        <form className="newsletter-form" onSubmit={e => e.preventDefault()}>
-          <input type="email" placeholder="Enter your email address" required />
-          <button type="submit">Subscribe</button>
-        </form>
-      </section>
+          <div className="footer-links">
+            <div className="footer-links-title neon-gradient">Quick Links</div>
+            <Link to="/">Home</Link>
+            <Link to="/about">About Us</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
+          </div>
+          <div className="footer-contact">
+            <div className="footer-links-title neon-gradient">Contact Info</div>
+            <div>contact@recipegenie.com</div>
+            <div>+1 (555) 123-4567</div>
+            <div>San Francisco, CA</div>
+          </div>
+          <div className="footer-newsletter">
+            <div className="footer-links-title neon-gradient">Stay Updated</div>
+            <input type="email" placeholder="Enter your email" />
+            <button className="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+        <div className="footer-bottom">© 2025 RecipeGenie. All rights reserved.</div>
+      </footer>
     </div>
   );
 } 

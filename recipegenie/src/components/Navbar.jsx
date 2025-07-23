@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav className="navbar-neon">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to="/" className="navbar-logo neon-gradient-text">
           <span role="img" aria-label="genie" style={{ marginRight: 8 }}>🧞‍♂️</span>
           <span>RecipeGenie</span>
         </Link>
@@ -32,6 +32,8 @@ export default function Navbar() {
               {link.name}
             </NavLink>
           ))}
+          <Link to="/login" className="navbar-btn neon-gradient-btn">Login</Link>
+          <Link to="/signup" className="navbar-btn neon-gradient-btn">Sign Up</Link>
         </div>
         <button
           className="navbar-hamburger"
