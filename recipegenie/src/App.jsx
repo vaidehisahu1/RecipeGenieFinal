@@ -1,0 +1,28 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Services from './pages/Services';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+import Home from './pages/Home';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      {/* Main content area for routing */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services/*" element={<Services />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+      {/* Footer will go here */}
+    </Router>
+  );
+}
+
+export default App
