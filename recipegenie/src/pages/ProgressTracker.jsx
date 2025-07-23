@@ -11,17 +11,17 @@ const foodOptions = [
   { name: 'Protein shake', calories: 250, protein: 25, carbs: 10, fat: 4 },
 ];
 const dailyGoals = { calories: 2000, protein: 120, carbs: 250, fat: 65 };
+const achievementsList = [
+  { icon: '🔥', label: '7-Day Streak', desc: 'Logged meals for 7 consecutive days', glow: true },
+  { icon: '🧘‍♂️', label: 'Balanced Eater', desc: 'Maintained balanced macros' },
+  { icon: '💧', label: 'Hydration Hero', desc: 'Met water goal 5 days this week' },
+  { icon: '🎯', label: 'Goal Crusher', desc: 'Hit calorie goals 6 out of 7 days' },
+];
 const weeklyBase = {
   avgCalories: 1750,
   daysOnTrack: 5,
   avgWater: 1800,
   streak: 7,
-  achievements: [
-    { label: '7-Day Streak', desc: 'Logged meals for 7 consecutive days', glow: true },
-    { label: 'Hydration Hero', desc: 'Met water goal 5 days this week' },
-    { label: 'Balanced Eater', desc: 'Maintained balanced macros' },
-    { label: 'Goal Crusher', desc: 'Hit calorie goals 6 out of 7 days' },
-  ],
 };
 
 export default function ProgressTracker() {
@@ -62,6 +62,24 @@ export default function ProgressTracker() {
     avgCalories: Math.round((weeklyBase.avgCalories * 6 + totals.calories) / 7),
     daysOnTrack: weeklyBase.daysOnTrack + (totals.calories > 0 ? 1 : 0),
   };
+
+  // Achievements grid (same for both views)
+  function AchievementsGrid() {
+    return (
+      <div className="achievements-section">
+        <h3 style={{ color: '#fff', marginBottom: 18 }}>Achievements</h3>
+        <div className="achievements-grid">
+          {achievementsList.map((a) => (
+            <div className={`achievement-card2${a.glow ? ' neon-glow2' : ''}`} key={a.label}>
+              <div className="achievement-icon">{a.icon}</div>
+              <div className="achievement-title">{a.label}</div>
+              <div className="achievement-desc">{a.desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="feature-page-bg">
@@ -146,13 +164,7 @@ export default function ProgressTracker() {
               </tbody>
             </table>
           </div>
-          <div className="progress-achievements-row">
-            <h3>Achievements</h3>
-            <div className="achievement-card neon-glow">7-Day Streak</div>
-            <div className="achievement-card">Balanced Eater</div>
-            <div className="achievement-card">Hydration Hero</div>
-            <div className="achievement-card">Goal Crusher</div>
-          </div>
+          <AchievementsGrid />
         </>
       ) : (
         <>
@@ -178,15 +190,7 @@ export default function ProgressTracker() {
               <div className="progress-summary-label">{weeklySummary.streak}</div>
             </div>
           </div>
-          <div className="progress-achievements-row">
-            <h3>Achievements</h3>
-            {weeklySummary.achievements.map((a) => (
-              <div className={`achievement-card${a.glow ? ' neon-glow' : ''}`} key={a.label}>
-                {a.label}
-                <div style={{ color: '#b0b0b0', fontWeight: 400, fontSize: '0.95em' }}>{a.desc}</div>
-              </div>
-            ))}
-          </div>
+          <AchievementsGrid />
         </>
       )}
     </div>

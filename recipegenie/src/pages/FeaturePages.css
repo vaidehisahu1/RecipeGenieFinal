@@ -283,6 +283,64 @@
   display: inline-block;
 }
 
+.achievements-section {
+  margin: 2.5em auto 1.5em auto;
+  max-width: 900px;
+  background: none;
+}
+.achievements-section h3 {
+  font-size: 1.3em;
+  color: #fff;
+  margin-bottom: 1em;
+  text-align: left;
+}
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2em;
+}
+.achievement-card2 {
+  background: #181a20;
+  border-radius: 14px;
+  box-shadow: 0 0 12px #baff3944;
+  padding: 1.2em 2em 1.2em 2em;
+  color: #e0e0fa;
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  border: 2px solid transparent;
+  position: relative;
+  min-height: 70px;
+}
+.neon-glow2 {
+  border: 2px solid #ffe066;
+  box-shadow: 0 0 24px #ffe06688, 0 0 32px #ffe06644;
+}
+.achievement-icon {
+  font-size: 2em;
+  margin-right: 0.7em;
+  flex-shrink: 0;
+}
+.achievement-title {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 0.2em;
+}
+.achievement-desc {
+  color: #b0b0b0;
+  font-size: 1em;
+  font-weight: 400;
+}
+@media (max-width: 700px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  .achievement-card2 {
+    padding: 1em 1em;
+  }
+}
+
 @media (max-width: 900px) {
   .progress-summary-row {
     flex-direction: column;
