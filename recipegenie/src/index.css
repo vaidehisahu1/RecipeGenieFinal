@@ -541,3 +541,413 @@ input:focus, textarea:focus {
     padding: 1em 0.7em;
   }
 }
+
+/* About Page Neon Styles */
+.about-page {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+/* About Hero Section */
+.about-hero {
+  position: relative;
+  min-height: 60vh;
+  padding: 0 0 3em 0;
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  filter: brightness(0.35) blur(1.5px);
+  z-index: 0;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 3em auto 2em auto;
+  padding: 2.5em 2em 2em 2em;
+  background: rgba(24, 24, 36, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 0 32px #00fff7cc, 0 0 16px #ffb34788;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 179, 71, 0.3);
+}
+
+.about-hero-badge {
+  background: linear-gradient(90deg, #ffb347 60%, #00fff7 100%);
+  color: #181824;
+  font-weight: 600;
+  font-size: 1em;
+  padding: 0.4em 1.2em;
+  border-radius: 999px;
+  margin-bottom: 1.2em;
+  box-shadow: 0 0 8px #ffb34788;
+  letter-spacing: 1px;
+}
+
+.about-hero-title {
+  font-size: 2.5em;
+  font-weight: 800;
+  color: #ffb347;
+  margin-bottom: 0.4em;
+  line-height: 1.1;
+  text-shadow: 0 0 16px #ffb34788;
+}
+
+.about-hero-summary {
+  color: #e0e0fa;
+  font-size: 1.2em;
+  line-height: 1.6;
+  opacity: 0.95;
+  max-width: 600px;
+}
+
+/* About Sections */
+.about-section {
+  padding: 3em 0;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.section-title {
+  color: #ffb347;
+  font-size: 2.2em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2em;
+  text-shadow: 0 0 12px #ffb34788;
+  letter-spacing: 1px;
+}
+
+/* Mission Card */
+.about-mission-card {
+  background: linear-gradient(135deg, #181824 80%, #23234d 100%);
+  border-radius: 20px;
+  padding: 2.5em 2em;
+  text-align: center;
+  box-shadow: 0 0 24px #00fff7cc;
+  border: 1px solid rgba(0, 255, 247, 0.3);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission-icon {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 16px #ffb34788;
+}
+
+.about-mission-card h2 {
+  color: #ffb347;
+  font-size: 2em;
+  margin-bottom: 0.8em;
+  text-shadow: 0 0 12px #ffb34788;
+}
+
+.about-mission-card p {
+  color: var(--color-text);
+  font-size: 1.2em;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.value-card {
+  background: linear-gradient(135deg, #181824 80%, #23234d 100%);
+  border-radius: 16px;
+  padding: 2em 1.5em;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  border: 1px solid rgba(255, 0, 234, 0.2);
+  box-shadow: 0 0 16px rgba(255, 0, 234, 0.3);
+}
+
+.value-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: linear-gradient(135deg, #23234d 60%, #181824 100%);
+  box-shadow: 0 0 32px rgba(255, 0, 234, 0.5), 0 0 16px #00fff7cc;
+}
+
+.value-icon {
+  font-size: 2.5em;
+  margin-bottom: 0.8em;
+  text-shadow: 0 0 12px var(--color-accent2);
+}
+
+.value-card h3 {
+  color: #ffb347;
+  font-size: 1.3em;
+  margin-bottom: 0.8em;
+  text-shadow: 0 0 8px #ffb34788;
+}
+
+.value-card p {
+  color: var(--color-text);
+  font-size: 1em;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Features Highlight */
+.features-highlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.feature-highlight-card {
+  background: linear-gradient(135deg, #181824 80%, #23234d 100%);
+  border-radius: 16px;
+  padding: 1.8em;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2em;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0, 255, 247, 0.2);
+  box-shadow: 0 0 16px rgba(0, 255, 247, 0.3);
+}
+
+.feature-highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 24px rgba(0, 255, 247, 0.5), 0 0 12px #ffb34788;
+}
+
+.feature-highlight-icon {
+  font-size: 2.2em;
+  text-shadow: 0 0 12px var(--color-accent);
+  flex-shrink: 0;
+}
+
+.feature-highlight-content h3 {
+  color: #ffb347;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 8px #ffb34788;
+}
+
+.feature-highlight-content p {
+  color: var(--color-text);
+  font-size: 1em;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* Team Grid */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.team-card {
+  background: linear-gradient(135deg, #181824 80%, #23234d 100%);
+  border-radius: 20px;
+  padding: 2em 1.5em;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(57, 255, 20, 0.2);
+  box-shadow: 0 0 16px rgba(57, 255, 20, 0.3);
+}
+
+.team-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 32px rgba(57, 255, 20, 0.5), 0 0 16px #ffb34788;
+}
+
+.team-avatar {
+  font-size: 3.5em;
+  margin-bottom: 0.8em;
+  text-shadow: 0 0 16px var(--color-accent3);
+}
+
+.team-card h3 {
+  color: #ffb347;
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
+  text-shadow: 0 0 8px #ffb34788;
+}
+
+.team-role {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 0.8em !important;
+  text-shadow: 0 0 6px var(--color-accent);
+}
+
+.team-card p:not(.team-role) {
+  color: var(--color-text);
+  font-size: 1em;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+/* CTA Section */
+.about-cta-section {
+  padding: 4em 0;
+  background: linear-gradient(135deg, #0a0a23 0%, #181824 100%);
+  margin-top: 2em;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #181824 80%, #23234d 100%);
+  border-radius: 24px;
+  padding: 3em 2em;
+  text-align: center;
+  box-shadow: 0 0 32px #00fff7cc, 0 0 16px #ffb34788;
+  border: 1px solid rgba(255, 179, 71, 0.3);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-card h2 {
+  color: #ffb347;
+  font-size: 2.2em;
+  margin-bottom: 0.8em;
+  text-shadow: 0 0 16px #ffb34788;
+}
+
+.cta-card p {
+  color: var(--color-text);
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 2em;
+  opacity: 0.95;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1.2em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 0.8em 2.2em;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.cta-btn.primary {
+  background: linear-gradient(90deg, #ffb347 60%, #00fff7 100%);
+  color: #181824;
+  box-shadow: 0 0 16px #ffb34788;
+}
+
+.cta-btn.primary:hover {
+  background: linear-gradient(90deg, #00fff7 60%, #ffb347 100%);
+  box-shadow: 0 0 24px #00fff7cc;
+  transform: translateY(-2px);
+}
+
+.cta-btn.secondary {
+  background: transparent;
+  color: #ffb347;
+  border: 2px solid #ffb347;
+  box-shadow: 0 0 12px #ffb34788;
+}
+
+.cta-btn.secondary:hover {
+  background: #ffb347;
+  color: #181824;
+  box-shadow: 0 0 20px #ffb347cc;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero-content {
+    margin: 2em auto 1em auto;
+    padding: 2em 1.5em;
+  }
+  
+  .about-hero-title {
+    font-size: 2em;
+  }
+  
+  .about-hero-summary {
+    font-size: 1.1em;
+  }
+  
+  .section-title {
+    font-size: 1.8em;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+  
+  .features-highlight {
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 0 1em;
+  }
+  
+  .about-hero-content {
+    padding: 1.5em 1em;
+  }
+  
+  .about-mission-card {
+    padding: 2em 1.5em;
+  }
+  
+  .value-card, .team-card {
+    padding: 1.5em 1em;
+  }
+  
+  .cta-card {
+    padding: 2em 1.5em;
+  }
+}
