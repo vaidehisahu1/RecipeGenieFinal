@@ -147,12 +147,19 @@ function WhyCard({ icon, title, desc, highlight }) {
 }
 
 function TestimonialCard({ name, role, text }) {
+  // Assign profile photos based on name
+  let avatar = '';
+  if (name === 'Sarah Johnson') avatar = 'https://randomuser.me/api/portraits/women/44.jpg';
+  else if (name === 'Mike Chen') avatar = 'https://randomuser.me/api/portraits/men/32.jpg';
+  else if (name === 'Emily Rodriguez') avatar = 'https://randomuser.me/api/portraits/women/65.jpg';
   return (
     <div className="testimonial-card">
       <div className="testimonial-stars">★★★★★</div>
       <div className="testimonial-text">“{text}”</div>
       <div className="testimonial-user">
-        <span className="testimonial-avatar"></span>
+        <span className="testimonial-avatar">
+          {avatar && <img src={avatar} alt={name} style={{ width: 40, height: 40, borderRadius: '50%' }} />}
+        </span>
         <span>
           <div className="testimonial-name">{name}</div>
           <div className="testimonial-role">{role}</div>

@@ -80,24 +80,20 @@ export default function About() {
           <h2 style={{ textAlign: 'center' }}>What We Value</h2>
           <div className="values-grid">
             <div className="value-card">
-              <span className="icon-value health" />
-              <h4> User-Focused Innovation</h4>
-              <p>We build tools that solve real user needs with AI — not hype.</p>
+              <div className="value-title" style={{ fontSize: '1.5em', color: 'var(--color-accent2)', fontWeight: 700, marginBottom: 8 }}>User-Focused Innovation</div>
+              <div className="value-desc">We design every feature with the user’s needs and feedback at the center.</div>
             </div>
             <div className="value-card">
-              <span className="icon-value innovation" />
-              <h4> Everyday Accessibility</h4>
-              <p>From busy students to working parents, our platform is made for all.</p>
+              <div className="value-title" style={{ fontSize: '1.5em', color: 'var(--color-accent2)', fontWeight: 700, marginBottom: 8 }}>Everyday Accessibility</div>
+              <div className="value-desc">Our tools are made for everyone, everywhere—no expertise required.</div>
             </div>
             <div className="value-card">
-              <span className="icon-value accessibility" />
-              <h4> Clarity & Simplicity</h4>
-              <p>Nutrition advice shouldn’t feel like a puzzle. We keep it clean and usable.</p>
+              <div className="value-title" style={{ fontSize: '1.5em', color: 'var(--color-accent2)', fontWeight: 700, marginBottom: 8 }}>Clarity & Simplicity</div>
+              <div className="value-desc">We believe in making nutrition guidance clear, actionable, and jargon-free.</div>
             </div>
             <div className="value-card">
-              <span className="icon-value accessibility" />
-              <h4> Health Without Judgement</h4>
-              <p>We support progress over perfection, encouraging balanced and sustainable habits.</p>
+              <div className="value-title" style={{ fontSize: '1.5em', color: 'var(--color-accent2)', fontWeight: 700, marginBottom: 8 }}>Health Without Judgement</div>
+              <div className="value-desc">We support every user’s unique journey, free from guilt or comparison.</div>
             </div>
           </div>
         </section>

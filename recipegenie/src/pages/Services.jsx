@@ -33,7 +33,7 @@ const features = [
     button: 'Try Water Intake',
   },
   {
-    name: 'Daily and Weekly Recap',
+    name: 'Progress Tracker',
     description: [
       'Comprehensive health analytics that provide insights into your nutrition journey and wellness progress.',
       'Daily calorie and nutrient tracking',
@@ -44,7 +44,7 @@ const features = [
     ],
     icon: '📈',
     path: '/services/my-progress',
-    button: 'Try Daily and',
+    button: 'Try Progress Tracker',
   },
   {
     name: 'Smart Grocery List Generator',
@@ -135,7 +135,7 @@ export default function Services() {
                 <h2>{feature.name}</h2>
               </div>
               <ul className="feature-desc-list">
-                <li style={{ fontWeight: 500, color: 'var(--color-accent2)', marginBottom: 6 }}>{feature.description[0]}</li>
+                <li style={{ fontWeight: 600, color: 'var(--color-accent2)', marginBottom: '1.2em', fontSize: '1.15em' }}>{feature.description[0]}</li>
                 {feature.description.slice(1).map((desc, idx) => (
                   <li key={idx}>{desc}</li>
                 ))}
