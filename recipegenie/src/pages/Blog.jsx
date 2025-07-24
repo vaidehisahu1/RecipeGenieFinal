@@ -104,7 +104,7 @@ const blogData = {
     {
       title: 'Your Week, Your Way',
       excerpt: 'Plan your meals in just a few taps. RecipeGenie creates daily and weekly meal plans based on your dietary goals and available ingredients. Whether it’s a busy week or a slow weekend, your meals stay organized and on track.',
-      author: 'Alex Chen',
+      author: 'Alex Che',
       date: 'May 1, 2025',
       readTime: '5 min read',
       tags: ['Meal Planning', 'Organization'],
