@@ -106,7 +106,7 @@ const blogData = {
       excerpt: 'Plan your meals in just a few taps. RecipeGenie creates daily and weekly meal plans based on your dietary goals and available ingredients. Whether it’s a busy week or a slow weekend, your meals stay organized and on track.',
       author: 'Alex Cheng',
       date: 'May 1, 2025',
-      readTime: '5 min read',
+      readTime: '5 min reading',
       tags: ['Meal Planning', 'Organization'],
       image: 'https://media.istockphoto.com/id/876656394/photo/healthy-food-concept-fresh-vegetables-fruits-meat-and-fish-on-wooden-table-healthy-eating-and.jpg?s=612x612&w=0&k=20&c=N_LMUgJcADQrhZUnHSJmF1TueaZ2_5scc6ArQxZsxho=',
     },
