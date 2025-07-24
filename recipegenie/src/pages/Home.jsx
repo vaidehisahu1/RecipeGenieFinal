@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Home.css';
 
 export default function Home() {
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+  const handleLogout = () => {
+    localStorage.removeItem('isLoggedIn');
+    setIsLoggedIn(false);
+    window.location.reload();
+  };
   return (
     <div className="home-bg">
       <header className="navbar">
@@ -18,8 +24,14 @@ export default function Home() {
           <Link to="/blog" className="nav-link">Blog</Link>
         </nav>
         <div className="navbar-right">
-          <Link to="/login" className="login-btn">Login</Link>
-          <Link to="/signup" className="signup-btn">Sign Up</Link>
+          {isLoggedIn ? (
+            <button className="login-btn" onClick={handleLogout}>Logout</button>
+          ) : (
+            <>
+              <Link to="/login" className="login-btn">Login</Link>
+              <Link to="/signup" className="signup-btn">Sign Up</Link>
+            </>
+          )}
         </div>
       </header>
       <main>

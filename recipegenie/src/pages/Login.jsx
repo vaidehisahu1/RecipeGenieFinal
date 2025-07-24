@@ -9,6 +9,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Login submitted!');
+    localStorage.setItem('isLoggedIn', 'true');
     navigate('/');
   };
   return (

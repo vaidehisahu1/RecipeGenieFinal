@@ -10,6 +10,7 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Signup submitted!');
+    localStorage.setItem('isLoggedIn', 'true');
     navigate('/');
   };
   return (

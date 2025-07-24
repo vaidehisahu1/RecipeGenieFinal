@@ -22,7 +22,7 @@
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
   background-clip: unset;
-  text-fill-color: unset;
+  
   filter: none;
 }
 .neon-text {
@@ -50,7 +50,7 @@
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
   background-clip: unset;
-  text-fill-color: unset;
+
   filter: none;
 }
 .about-journey-sub {
@@ -140,7 +140,7 @@
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
   background-clip: unset;
-  text-fill-color: unset;
+
   filter: none;
 }
 .about-values-sub {
@@ -196,7 +196,7 @@
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
   background-clip: unset;
-  text-fill-color: unset;
+ 
   filter: none;
 }
 .about-team-sub {
