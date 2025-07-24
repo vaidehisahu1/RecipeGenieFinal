@@ -1,16 +1,16 @@
 :root {
-  --color-bg: #0a0a23;
-  --color-bg-secondary: #181824;
-  --color-text: #e0e0fa;
-  --color-accent: #00fff7;
-  --color-accent2: #ff00ea;
-  --color-accent3: #39ff14;
-  --color-card: #181824cc;
-  --color-glow: #00fff7cc;
-  --color-error: #ff3c6f;
-  --color-success: #39ff14;
-  --color-link: #00fff7;
-  --color-link-hover: #ff00ea;
+  --color-bg: #fff;
+  --color-bg-secondary: #fffbe7;
+  --color-text: #222;
+  --color-accent: #FFD600; /* yellow */
+  --color-accent2: #FF5252; /* red */
+  --color-accent3: #43A047; /* green */
+  --color-card: #fffbe7;
+  --color-glow: #FFD60044;
+  --color-error: #FF5252;
+  --color-success: #43A047;
+  --color-link: #FF9800; /* orange */
+  --color-link-hover: #FF5252;
   font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, Helvetica, sans-serif;
   font-size: 16px;
   background: var(--color-bg);
@@ -27,7 +27,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--color-accent);
+  color: var(--color-accent2);
   font-family: inherit;
   margin: 0 0 0.5em 0;
   letter-spacing: 1px;
@@ -44,27 +44,27 @@ a:hover {
 }
 
 button, input[type="submit"] {
-  background: var(--color-bg-secondary);
-  color: var(--color-accent);
-  border: 1.5px solid var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-text);
+  border: none;
   border-radius: 8px;
   padding: 0.7em 1.5em;
   font-size: 1em;
   font-family: inherit;
   cursor: pointer;
-  box-shadow: 0 0 8px var(--color-glow);
+  box-shadow: 0 2px 8px #ffd60022;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 button:hover, input[type="submit"]:hover {
-  background: var(--color-accent);
-  color: var(--color-bg);
-  box-shadow: 0 0 16px var(--color-accent2);
+  background: var(--color-accent2);
+  color: #fff;
+  box-shadow: 0 4px 16px #ff525244;
 }
 
 input, textarea {
-  background: var(--color-card);
+  background: #fff;
   color: var(--color-text);
-  border: 1.5px solid var(--color-accent2);
+  border: 1.5px solid var(--color-accent3);
   border-radius: 6px;
   padding: 0.6em 1em;
   font-size: 1em;
@@ -73,8 +73,8 @@ input, textarea {
   transition: border 0.2s, box-shadow 0.2s;
 }
 input:focus, textarea:focus {
-  border: 1.5px solid var(--color-accent);
-  box-shadow: 0 0 8px var(--color-accent);
+  border: 1.5px solid var(--color-accent2);
+  box-shadow: 0 0 8px var(--color-accent2);
 }
 
 ::-webkit-scrollbar {
@@ -82,14 +82,14 @@ input:focus, textarea:focus {
   background: var(--color-bg-secondary);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-accent2);
+  background: var(--color-accent);
   border-radius: 8px;
 }
 
 .card {
   background: var(--color-card);
   border-radius: 16px;
-  box-shadow: 0 0 24px var(--color-glow);
+  box-shadow: 0 2px 16px #ffd60022;
   padding: 2em;
   margin: 1em 0;
 }

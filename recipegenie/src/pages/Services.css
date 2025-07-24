@@ -1,209 +1,185 @@
-/* Neon Dark Aesthetic for Services Page */
+/* Foody Light Aesthetic for Services Page */
 
 .services-page {
-  background: #181a20;
-  color: #e0e0e0;
+  background: var(--color-bg);
+  color: var(--color-text);
   min-height: 100vh;
   padding-bottom: 3rem;
 }
 
-/* Hero Banner */
 .services-hero {
   text-align: center;
   padding: 3rem 1rem 2rem 1rem;
-  background: linear-gradient(90deg, #181a20 60%, #232946 100%);
+  background: var(--color-bg-secondary);
 }
 .services-hero h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-accent2);
   margin-bottom: 1rem;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  text-fill-color: unset;
+  filter: none;
 }
 .neon-text {
-  color: #00ffd0;
-  text-shadow: 0 0 8px #00ffd088, 0 0 16px #00ffd044;
+  color: var(--color-accent);
+  text-shadow: 0 0 8px #ffd60044, 0 0 16px #ff525222;
 }
 .services-hero-sub {
   font-size: 1.2rem;
-  color: #b0b0b0;
+  color: var(--color-text);
   margin: 0 auto;
   max-width: 700px;
 }
 
-/* Features Grid */
 .services-features-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: center;
-  max-width: 1100px;
-  margin: 2.5rem auto 2.5rem auto;
-  padding: 0 1rem;
+  justify-content: flex-start;
+  margin: 3rem auto 2rem auto;
+  max-width: 1200px;
 }
 .services-feature-card {
-  background: #232946;
+  background: var(--color-card);
   border-radius: 18px;
-  box-shadow: 0 0 16px #00ffd022;
-  padding: 2rem 1.5rem 1.5rem 1.5rem;
-  min-width: 280px;
-  max-width: 420px;
-  flex: 1 1 320px;
-  color: #e0e0e0;
+  box-shadow: 0 2px 16px #ffd60022;
+  border: 1.5px solid var(--color-accent2);
+  padding: 2rem 1.5rem;
+  flex: 1 1 380px;
+  min-width: 320px;
+  color: var(--color-text);
+  margin: 0 0.5rem 1.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
 }
 .feature-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.7em;
+  gap: 1em;
+  margin-bottom: 1em;
 }
 .feature-icon {
-  font-size: 2.2em;
-  text-shadow: 0 0 12px #00ffd088;
+  font-size: 2.2rem;
+  color: var(--color-accent3);
 }
 .services-feature-card h2 {
-  color: #fff;
-  font-size: 1.2em;
+  font-size: 1.3rem;
+  color: var(--color-accent2);
   margin: 0;
-  letter-spacing: 1px;
 }
 .feature-desc-list {
-  margin: 0 0 1.2em 0;
-  padding-left: 1.2em;
-  color: #b0b0b0;
-  font-size: 1em;
+  margin: 1em 0 1.5em 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-text);
 }
 .feature-desc-list li {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
 }
 .feature-btn {
-  background: linear-gradient(90deg, #00ffd0 0%, #00bfff 100%);
-  color: #181a20;
-  border: none;
-  border-radius: 8px;
-  padding: 0.7em 1.5em;
+  background: var(--color-accent2);
+  color: #fff;
   font-weight: 700;
-  font-size: 1em;
-  box-shadow: 0 0 8px #00ffd088;
-  margin-top: 1em;
-  transition: background 0.2s, color 0.2s;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7em 2em;
+  font-size: 1rem;
+  box-shadow: 0 0 16px #ff525244;
   cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s;
 }
 .feature-btn:hover {
-  background: linear-gradient(90deg, #00bfff 0%, #00ffd0 100%);
-  color: #232946;
+  background: var(--color-accent);
+  color: var(--color-text);
+  box-shadow: 0 0 24px #ffd60099;
 }
 
-/* FAQ Section */
 .services-faq-section {
-  max-width: 900px;
   margin: 3rem auto 2rem auto;
-  text-align: center;
+  max-width: 900px;
+  text-align: left;
 }
 .services-faq-section h2 {
-  color: #fff;
   font-size: 2rem;
+  color: var(--color-accent2);
 }
 .faq-sub {
-  color: #b0b0b0;
+  color: var(--color-text);
   margin-bottom: 2rem;
 }
 .faq-list {
-  margin: 0 auto;
-  max-width: 700px;
-  text-align: left;
+  margin-top: 2em;
 }
 .faq-item {
-  background: #232946;
-  border-radius: 14px;
-  box-shadow: 0 0 12px #00ffd022;
-  margin-bottom: 1.2em;
-  overflow: hidden;
-  transition: box-shadow 0.2s;
-}
-.faq-item.open {
-  box-shadow: 0 0 24px #00ffd044;
+  background: var(--color-card);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #ffd60022;
+  margin-bottom: 1em;
+  border: 1.5px solid var(--color-accent2);
 }
 .faq-question {
   width: 100%;
   background: none;
   border: none;
-  color: #fff;
-  font-size: 1.1em;
-  font-weight: 600;
+  color: var(--color-accent2);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1em 1.2em;
   text-align: left;
-  padding: 1.1em 1.5em 1.1em 1.2em;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  outline: none;
-  transition: background 0.2s;
-}
-.faq-question:hover {
-  background: #181a20;
 }
 .faq-toggle {
-  font-size: 1.5em;
-  color: #00ffd0;
-  margin-left: 1em;
-  transition: color 0.2s;
-}
-.faq-answer-wrapper {
-  background: #232946;
-  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
-  overflow: hidden;
+  font-size: 1.3em;
+  color: var(--color-accent3);
 }
 .faq-answer {
-  padding: 1em 1.5em 1.2em 2.2em;
-  color: #b0b0b0;
-  font-size: 1em;
+  color: var(--color-text);
+  padding: 1em 1.2em 1.2em 1.2em;
 }
 
-/* Call to Action */
 .services-cta {
-  background: linear-gradient(90deg, #00ffd0 0%, #00bfff 100%);
-  color: #181a20;
   text-align: center;
-  padding: 2.5rem 1rem 2.5rem 1rem;
-  border-radius: 18px;
-  max-width: 900px;
-  margin: 2.5rem auto 0 auto;
-  box-shadow: 0 0 24px #00ffd044;
+  background: var(--color-bg-secondary);
+  padding: 3em 3vw 2em 3vw;
 }
 .services-cta h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5em;
+  color: var(--color-accent2);
+  font-size: 2rem;
 }
 .services-cta p {
-  color: #181a20;
-  margin-bottom: 1.5em;
-  font-size: 1.1em;
+  color: var(--color-text);
+  margin-bottom: 2em;
 }
 .cta-actions {
   display: flex;
+  gap: 1.5em;
   justify-content: center;
-  gap: 1em;
+  margin-top: 1.5em;
 }
 .cta-btn {
-  background: #181a20;
-  color: #00ffd0;
-  border: none;
-  border-radius: 8px;
-  padding: 0.7em 1.5em;
+  background: var(--color-accent2);
+  color: #fff;
   font-weight: 700;
-  font-size: 1em;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7em 2em;
+  font-size: 1rem;
+  box-shadow: 0 0 16px #ff525244;
   cursor: pointer;
-  box-shadow: 0 0 8px #00ffd088;
-  transition: background 0.2s, color 0.2s;
+  transition: box-shadow 0.2s, background 0.2s;
 }
 .cta-btn:hover {
-  background: #00ffd0;
-  color: #181a20;
+  background: var(--color-accent);
+  color: var(--color-text);
+  box-shadow: 0 0 24px #ffd60099;
 }
 
 @media (max-width: 900px) {
@@ -211,9 +187,9 @@
     flex-direction: column;
     align-items: center;
   }
-  .services-feature-card {
-    min-width: unset;
-    max-width: 100%;
-    padding: 1.3em 1em 1em 1em;
+  .about-journey, .about-mission-vision, .about-values, .about-team, .services-features-grid, .services-faq-section {
+    max-width: 98vw;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 } 

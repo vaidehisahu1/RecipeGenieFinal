@@ -1,8 +1,8 @@
-/* Neon Blue-Purple Aesthetic for About Page */
+/* Foody Light Aesthetic for About Page */
 
 .about-page {
-  background: #181a20;
-  color: #e0e0e0;
+  background: var(--color-bg);
+  color: var(--color-text);
   min-height: 100vh;
   padding-bottom: 3rem;
 }
@@ -11,27 +11,27 @@
 .about-hero {
   text-align: center;
   padding: 3rem 1rem 2rem 1rem;
-  background: linear-gradient(90deg, #181a20 60%, #232946 100%);
+  background: var(--color-bg-secondary);
 }
 .about-hero h1 {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #38e8ff;
+  color: var(--color-accent2);
   margin-bottom: 1rem;
-  background: linear-gradient(90deg, #38e8ff 0%, #7b61ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  filter: drop-shadow(0 0 8px #38e8ffcc);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  text-fill-color: unset;
+  filter: none;
 }
 .neon-text {
-  color: #7b61ff;
-  text-shadow: 0 0 8px #38e8ff88, 0 0 16px #7b61ff44;
+  color: var(--color-accent);
+  text-shadow: 0 0 8px #ffd60044, 0 0 16px #ff525222;
 }
 .about-hero-sub {
   font-size: 1.2rem;
-  color: #b0b0b0;
+  color: var(--color-text);
   margin: 0 auto;
   max-width: 700px;
 }
@@ -44,17 +44,17 @@
 }
 .about-journey h2 {
   font-size: 2.2rem;
-  color: #38e8ff;
+  color: var(--color-accent2);
   margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, #38e8ff 0%, #7b61ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  filter: drop-shadow(0 0 8px #38e8ffcc);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  text-fill-color: unset;
+  filter: none;
 }
 .about-journey-sub {
-  color: #b0b0b0;
+  color: var(--color-text);
   margin-bottom: 2rem;
 }
 .timeline {
@@ -78,21 +78,21 @@
   text-align: center;
 }
 .neon-pill {
-  background: linear-gradient(90deg, #38e8ff 0%, #7b61ff 100%);
-  color: #181a20;
+  background: var(--color-accent);
+  color: #fff;
   border-radius: 20px;
   padding: 0.3em 1em;
-  box-shadow: 0 0 8px #38e8ff88;
+  box-shadow: 0 0 8px #ffd60044;
   font-weight: 700;
 }
 .timeline-content h3 {
   margin: 0 0 0.2em 0;
-  color: #38e8ff;
+  color: var(--color-accent2);
   font-size: 1.2rem;
 }
 .timeline-content p {
   margin: 0;
-  color: #b0b0b0;
+  color: var(--color-text);
   font-size: 1rem;
 }
 
@@ -106,24 +106,24 @@
   max-width: 1200px;
 }
 .card {
-  background: #232946;
+  background: var(--color-card);
   border-radius: 18px;
-  box-shadow: 0 0 16px #38e8ff44;
-  border: 1.5px solid #7b61ff;
+  box-shadow: 0 2px 16px #ffd60022;
+  border: 1.5px solid var(--color-accent2);
   padding: 2rem 1.5rem;
   flex: 1 1 380px;
   min-width: 320px;
-  color: #e0e0e0;
+  color: var(--color-text);
   margin: 0 0.5rem 1.5rem 0;
 }
 .icon-mission::before {
   content: '\25CE';
-  color: #38e8ff;
+  color: var(--color-accent);
   margin-right: 0.5em;
 }
 .icon-vision::before {
   content: '\1F441';
-  color: #7b61ff;
+  color: var(--color-accent2);
   margin-right: 0.5em;
 }
 
@@ -134,17 +134,17 @@
   text-align: left;
 }
 .about-values h2 {
-  color: #38e8ff;
+  color: var(--color-accent2);
   font-size: 2.2rem;
-  background: linear-gradient(90deg, #38e8ff 0%, #7b61ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  filter: drop-shadow(0 0 8px #38e8ffcc);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  text-fill-color: unset;
+  filter: none;
 }
 .about-values-sub {
-  color: #b0b0b0;
+  color: var(--color-text);
   margin-bottom: 2rem;
 }
 .values-grid {
@@ -154,15 +154,15 @@
   justify-content: flex-start;
 }
 .value-card {
-  background: #232946;
+  background: var(--color-card);
   border-radius: 16px;
-  box-shadow: 0 0 12px #7b61ff44;
-  border: 1.5px solid #38e8ff;
+  box-shadow: 0 2px 16px #ffd60022;
+  border: 1.5px solid var(--color-accent2);
   padding: 1.5rem 1rem;
   min-width: 220px;
   max-width: 320px;
   flex: 1 1 220px;
-  color: #e0e0e0;
+  color: var(--color-text);
   margin: 0 0.5rem 1.5rem 0;
 }
 .icon-value {
@@ -172,15 +172,15 @@
 }
 .icon-value.health::before {
   content: '\2665';
-  color: #38e8ff;
+  color: var(--color-accent3);
 }
 .icon-value.innovation::before {
   content: '\1F4A1';
-  color: #7b61ff;
+  color: var(--color-accent2);
 }
 .icon-value.accessibility::before {
   content: '\1F464';
-  color: #b366ff;
+  color: var(--color-link);
 }
 
 /* Team */
@@ -190,17 +190,17 @@
   text-align: left;
 }
 .about-team h2 {
-  color: #38e8ff;
+  color: var(--color-accent2);
   font-size: 2.2rem;
-  background: linear-gradient(90deg, #38e8ff 0%, #7b61ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  filter: drop-shadow(0 0 8px #38e8ffcc);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  text-fill-color: unset;
+  filter: none;
 }
 .about-team-sub {
-  color: #b0b0b0;
+  color: var(--color-text);
   margin-bottom: 2rem;
 }
 .team-grid {
@@ -210,15 +210,15 @@
   justify-content: flex-start;
 }
 .team-card {
-  background: #232946;
+  background: var(--color-card);
   border-radius: 16px;
-  box-shadow: 0 0 12px #7b61ff44;
-  border: 1.5px solid #38e8ff;
+  box-shadow: 0 2px 16px #ffd60022;
+  border: 1.5px solid var(--color-accent2);
   padding: 1.5rem 1rem;
   min-width: 220px;
   max-width: 320px;
   flex: 1 1 220px;
-  color: #e0e0e0;
+  color: var(--color-text);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -229,25 +229,25 @@
   height: 80px;
   border-radius: 50%;
   margin-bottom: 1em;
-  border: 2px solid #38e8ff;
-  box-shadow: 0 0 8px #38e8ff88;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 8px #ffd60044;
 }
 .team-role {
   font-size: 1em;
   font-weight: 600;
   margin-bottom: 0.5em;
   display: block;
-  color: #7b61ff;
+  color: var(--color-accent2);
 }
 .team-tag {
-  background: #38e8ff;
-  color: #181a20;
+  background: var(--color-accent3);
+  color: #fff;
   border-radius: 12px;
   padding: 0.2em 0.8em;
   font-size: 0.9em;
   margin-top: 0.7em;
   font-weight: 600;
-  box-shadow: 0 0 8px #38e8ff88;
+  box-shadow: 0 0 8px #43a04744;
   display: inline-block;
 }
 
