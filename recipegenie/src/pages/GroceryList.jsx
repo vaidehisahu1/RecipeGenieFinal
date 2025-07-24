@@ -27,6 +27,18 @@ export default function GroceryList() {
     setChecked((prev) => ({ ...prev, [name]: !prev[name] }));
   };
 
+  const todaysMeals = JSON.parse(localStorage.getItem('todaysMeals') || '[]');
+  const allChecked = items.length > 0 && items.every(item => checked[item.name]);
+
+  // When all are checked, mark meal as completed in localStorage
+  useEffect(() => {
+    if (allChecked && todaysMeals.length > 0) {
+      localStorage.setItem('todaysMealsCompleted', 'true');
+    } else {
+      localStorage.setItem('todaysMealsCompleted', 'false');
+    }
+  }, [allChecked, todaysMeals]);
+
   return (
     <div className="feature-page-bg">
       {/* Navbar */}
@@ -68,6 +80,25 @@ export default function GroceryList() {
           ))}
         </div>
         <button className="feature-btn-gradient" style={{ marginTop: 24 }} onClick={() => navigate('/services/recipe-finder')}>Pick a different recipe</button>
+
+        {allChecked ? (
+          <button className="feature-btn-gradient" style={{ marginTop: 32 }} onClick={() => navigate('/services/my-progress')}>Go to Progress Tracker</button>
+        ) : (
+          <div className="feature-card" style={{ marginTop: 32, background: 'var(--color-bg-secondary)' }}>
+            <h3 style={{ color: 'var(--color-accent2)', marginBottom: 12 }}>Track Progress</h3>
+            {todaysMeals.length === 0 ? (
+              <div style={{ color: '#ff5eae', fontWeight: 500, marginBottom: 12 }}>No meal selected for today.</div>
+            ) : (
+              <ul style={{ paddingLeft: 18, marginBottom: 12 }}>
+                {todaysMeals.map((meal, idx) => (
+                  <li key={idx} style={{ color: 'var(--color-text)', marginBottom: 4 }}>{meal.name}</li>
+                ))}
+              </ul>
+            )}
+            <button className="feature-btn-outline" onClick={() => navigate('/services/recipe-finder')}>Change Meal</button>
+            <button className="feature-btn-gradient" style={{ marginLeft: 12 }} onClick={() => navigate('/services/my-progress')}>Go to Progress Tracker</button>
+          </div>
+        )}
       </div>
       {/* Footer */}
       <footer className="footer">

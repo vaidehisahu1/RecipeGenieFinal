@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './FeaturePages.css';
 
@@ -34,6 +34,20 @@ export default function ProgressTracker() {
   ]);
   const [selectedFood, setSelectedFood] = useState('');
   const [selectedMeal, setSelectedMeal] = useState('Breakfast');
+
+  // Add this useEffect to sync with GroceryList completion
+  useEffect(() => {
+    const completed = localStorage.getItem('todaysMealsCompleted') === 'true';
+    const todaysMeals = JSON.parse(localStorage.getItem('todaysMeals') || '[]');
+    if (completed && todaysMeals.length > 0) {
+      // Only add if not already present
+      setMeals((prev) => {
+        const names = prev.map(m => m.name);
+        const toAdd = todaysMeals.filter(m => !names.includes(m.name));
+        return [...prev, ...toAdd.map(m => ({ ...m, meal: 'Lunch' }))];
+      });
+    }
+  }, []);
 
   // Calculate totals
   const totals = meals.reduce(
