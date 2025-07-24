@@ -277,7 +277,7 @@ export default function ProgressTracker() {
             <button className="btn btn-primary">Subscribe</button>
           </div>
         </div>
-        <div className="footer-bottom">© 2025 RecipeGenie. All rights reserved.</div>
+        <div className="footer-bottom">© 2025 RecipeGenie. All rights reservedd.</div>
       </footer>
     </div>
   );
