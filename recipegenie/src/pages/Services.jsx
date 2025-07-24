@@ -128,14 +128,14 @@ export default function Services() {
 
         {/* Features Grid */}
         <div className="services-features-grid">
-          {features.map((feature, i) => (
+          {features.map((feature) => (
             <div className="services-feature-card" key={feature.name}>
               <div className="feature-header">
                 <span className="feature-icon">{feature.icon}</span>
                 <h2>{feature.name}</h2>
               </div>
               <ul className="feature-desc-list">
-                <li style={{ fontWeight: 500, color: '#fff', marginBottom: 6 }}>{feature.description[0]}</li>
+                <li style={{ fontWeight: 500, color: 'var(--color-accent2)', marginBottom: 6 }}>{feature.description[0]}</li>
                 {feature.description.slice(1).map((desc, idx) => (
                   <li key={idx}>{desc}</li>
                 ))}
@@ -179,7 +179,10 @@ export default function Services() {
           <h2>Ready to Transform Your Health?</h2>
           <p>Join thousands of users who have already started their journey to better health with RecipeGenie</p>
           <div className="cta-actions">
-            <button className="cta-btn" onClick={() => navigate('/pricing')}>View Pricing</button>
+            <button className="cta-btn" onClick={() => {
+              const topSection = document.querySelector('.services-features-grid');
+              if (topSection) topSection.scrollIntoView({ behavior: 'smooth' });
+            }}>Let's Go</button>
           </div>
         </section>
       </div>

@@ -23,89 +23,87 @@ export default function About() {
         </div>
       </header>
       <div className="about-page">
-        {/* Hero Section */}
         <section className="about-hero">
-          <h1>
-            Revolutionizing Health Through <span className="neon-text">AI Innovation</span>
-          </h1>
-          <p className="about-hero-sub">
-            We're on a mission to make personalized nutrition accessible to everyone, using cutting-edge AI to transform how people approach their health and wellness.
-          </p>
+          <h1>About RecipeGenie</h1>
+          <h2 className="about-hero-sub">Personalized Nutrition. Simplified by AI.</h2>
+          <p>At RecipeGenie, we’re transforming the way people approach food and wellness by making personalized diet planning smart,
+             simple, and accessible. Our AI-powered platform helps users discover meal plans, recipes, and grocery lists tailored to their health goals —
+              whether it’s weight loss, muscle gain, or just eating better.</p>
         </section>
-        {/* Journey Timeline */}
         <section className="about-journey">
-          <h2>Our Journey</h2>
-          <p className="about-journey-sub">From a simple idea to a revolutionary health platform</p>
+          <h2 style={{ textAlign: 'center' }}>Our Journey</h2>
+          <p className="about-journey-sub" style={{ textAlign: 'center' }}>From a simple idea to a powerful everyday companion for smart eating.</p>
           <div className="timeline">
             <div className="timeline-item">
-              <div className="timeline-year neon-pill">2022</div>
+              <div className="timeline-year neon-pill"> 2022</div>
               <div className="timeline-content">
-                <h3>Company Founded</h3>
-                <p>RecipeGenie was born from a vision to make healthy eating accessible through AI technology.</p>
+                <h3>The Beginning</h3>
+                <p>RecipeGenie was founded with a clear vision: make healthy eating easy for everyone through intelligent recipe and nutrition technology.</p>
               </div>
             </div>
             <div className="timeline-item">
-              <div className="timeline-year neon-pill">2023</div>
+              <div className="timeline-year neon-pill"> 2023</div>
               <div className="timeline-content">
-                <h3>Beta Launch</h3>
-                <p>Launched our beta version with 1,000 early adopters and received overwhelming positive feedback.</p>
+                <h3>Beta Goes Live</h3>
+                <p>We launched our beta with over 1,000 users, refining features like the Recipe Finder, Water Tracker, and Smart Grocery List based on real feedback.</p>
               </div>
             </div>
             <div className="timeline-item">
-              <div className="timeline-year neon-pill">2024</div>
+              <div className="timeline-year neon-pill"> 2024</div>
               <div className="timeline-content">
-                <h3>AI Breakthrough</h3>
-                <p>Developed our proprietary AI algorithm that personalizes nutrition recommendations with 95% accuracy.</p>
+                <h3>AI That Understands You</h3>
+                <p>Our breakthrough: a proprietary AI algorithm that personalizes meal plans with 95% relevance based on user preferences, goals, and ingredients.</p>
               </div>
             </div>
             <div className="timeline-item">
-              <div className="timeline-year neon-pill">2025</div>
+              <div className="timeline-year neon-pill"> 2025</div>
               <div className="timeline-content">
-                <h3>Global Expansion</h3>
-                <p>Serving over 100,000 users worldwide with plans to expand to new markets and languages.</p>
+                <h3>Scaling Globally</h3>
+                <p>Today, RecipeGenie is helping over 100,000 users across the world eat better, smarter, and with purpose — with expansion into multilingual support and diverse dietary needs underway.</p>
               </div>
             </div>
           </div>
         </section>
-        {/* Mission & Vision */}
         <section className="about-mission-vision">
           <div className="about-mission card">
             <h3><span className="icon-mission" />Our Mission</h3>
-            <p>To democratize personalized nutrition by leveraging artificial intelligence, making healthy eating accessible, enjoyable, and sustainable for people from all walks of life.</p>
-            <p>We believe that everyone deserves access to personalized health guidance, regardless of their background, budget, or location. Our AI-powered platform breaks down barriers and provides intelligent solutions that adapt to each person's unique needs.</p>
+            <p>To make smart, personalized nutrition available to everyone — not just the health experts.</p>
+            <p>We believe food is fuel, medicine, and joy. RecipeGenie empowers people with practical, AI-driven guidance that’s rooted in real life: your ingredients, your goals, your lifestyle.</p>
           </div>
           <div className="about-vision card">
             <h3><span className="icon-vision" />Our Vision</h3>
-            <p>To create a world where personalized nutrition is the norm, not the exception, empowering individuals to take control of their health through intelligent technology.</p>
-            <p>We envision a future where AI seamlessly integrates into daily life, providing real-time guidance that helps people make informed decisions about their nutrition, leading to healthier, happier communities worldwide.</p>
+            <p>A world where food choices are easy, intentional, and backed by intelligent tech.</p>
+            <p>We imagine a future where your daily meal decisions are no longer overwhelming — because RecipeGenie handles the complexity, leaving you to enjoy healthy living effortlessly.</p>
           </div>
         </section>
-        {/* Values */}
         <section className="about-values">
-          <h2>Our Values</h2>
-          <p className="about-values-sub">The principles that guide everything we do</p>
+          <h2 style={{ textAlign: 'center' }}>What We Value</h2>
           <div className="values-grid">
             <div className="value-card">
               <span className="icon-value health" />
-              <h4>Health First</h4>
-              <p>Every decision we make prioritizes the health and wellbeing of our users above all else.</p>
+              <h4> User-Focused Innovation</h4>
+              <p>We build tools that solve real user needs with AI — not hype.</p>
             </div>
             <div className="value-card">
               <span className="icon-value innovation" />
-              <h4>Innovation</h4>
-              <p>We continuously push the boundaries of what's possible with AI and nutrition science.</p>
+              <h4> Everyday Accessibility</h4>
+              <p>From busy students to working parents, our platform is made for all.</p>
             </div>
             <div className="value-card">
               <span className="icon-value accessibility" />
-              <h4>Accessibility</h4>
-              <p>We believe healthy living should be accessible to everyone, regardless of their circumstances.</p>
+              <h4> Clarity & Simplicity</h4>
+              <p>Nutrition advice shouldn’t feel like a puzzle. We keep it clean and usable.</p>
+            </div>
+            <div className="value-card">
+              <span className="icon-value accessibility" />
+              <h4> Health Without Judgement</h4>
+              <p>We support progress over perfection, encouraging balanced and sustainable habits.</p>
             </div>
           </div>
         </section>
-        {/* Team */}
         <section className="about-team">
-          <h2>Meet Our Team</h2>
-          <p className="about-team-sub">The passionate experts behind RecipeGenie's innovation</p>
+          <h2 style={{ textAlign: 'center' }}>Meet Our Team</h2>
+          <p className="about-team-sub" style={{ textAlign: 'center' }}>The passionate experts behind RecipeGenie's innovation</p>
           <div className="team-grid">
             <div className="team-card">
               <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Dr. Sarah Mitchell" />

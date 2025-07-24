@@ -109,6 +109,7 @@ export default function RecipeFinder() {
           <span className="logo-text">RecipeGenie</span>
         </div>
         <nav className="navbar-center">
+          <Link to="/" className="nav-link">Home</Link>
           <Link to="/services/recipe-finder" className="nav-link active">Recipe Finder</Link>
           <Link to="/services/water-tracker" className="nav-link">Water Tracker</Link>
           <Link to="/services/my-progress" className="nav-link">Progress Tracker</Link>
