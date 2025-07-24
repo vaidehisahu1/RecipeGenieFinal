@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './FeaturePages.css';
 
 function groupIngredients(ingredients) {
@@ -27,18 +27,33 @@ export default function GroceryList() {
     setChecked((prev) => ({ ...prev, [name]: !prev[name] }));
   };
 
-  const handlePickMore = () => {
-    navigate('/services/recipe-finder');
-  };
-
   return (
     <div className="feature-page-bg">
+      {/* Navbar */}
+      <header className="navbar">
+        <div className="navbar-left">
+          <span className="logo-icon">&#128717;</span>
+          <span className="logo-text">RecipeGenie</span>
+        </div>
+        <nav className="navbar-center">
+          <Link to="/services/recipe-finder" className="nav-link">Recipe Finder</Link>
+          <Link to="/services/water-tracker" className="nav-link">Water Tracker</Link>
+          <Link to="/services/my-progress" className="nav-link">Progress Tracker</Link>
+          <Link to="/services/grocery-list" className="nav-link active">Grocery List</Link>
+        </nav>
+        <div className="navbar-right">
+          <Link to="/login" className="login-btn">Login</Link>
+          <Link to="/signup" className="signup-btn">Sign Up</Link>
+        </div>
+      </header>
+
+      {/* Main Content */}
       <section className="feature-hero">
         <h1 className="feature-title neon-pink">Shopping List</h1>
         <p className="feature-sub">Check off what you already have, or pick more recipes!</p>
       </section>
       <div className="feature-card" style={{ maxWidth: 700 }}>
-        <h2 style={{ color: '#baff39', marginBottom: 18 }}>What to Buy ({items.length} items)</h2>
+        <h2 style={{ color: '#baff39', marginBottom: 18 }}>Check off the required ingredients</h2>
         <div className="grocery-list-grid">
           {items.length === 0 && <div style={{ color: '#ff5eae', fontWeight: 600 }}>No items yet. Pick a recipe!</div>}
           {items.map((item) => (
@@ -52,8 +67,39 @@ export default function GroceryList() {
             </label>
           ))}
         </div>
-        <button className="feature-btn-gradient" style={{ marginTop: 24 }} onClick={handlePickMore}>Pick More Recipes</button>
+        <button className="feature-btn-gradient" style={{ marginTop: 24 }} onClick={() => navigate('/services/recipe-finder')}>Pick a different recipe</button>
       </div>
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-brand">
+            <div className="footer-logo neon-gradient">RecipeGenie</div>
+            <div className="footer-desc">Pioneering the future with cutting-edge technology solutions that illuminate possibilities.</div>
+            <div className="footer-socials"></div>
+          </div>
+          <div className="footer-links">
+            <div className="footer-links-title neon-gradient">Quick Links</div>
+            <Link to="/">Home</Link>
+            <Link to="/about">About Us</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
+          </div>
+          <div className="footer-contact">
+            <div className="footer-links-title neon-gradient">Contact Info</div>
+            <div>contact@recipegenie.com</div>
+            <div>+1 (555) 123-4567</div>
+            <div>San Francisco, CA</div>
+          </div>
+          <div className="footer-newsletter">
+            <div className="footer-links-title neon-gradient">Stay Updated</div>
+            <input type="email" placeholder="Enter your email" />
+            <button className="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+        <div className="footer-bottom">© 2025 RecipeGenie. All rights reserved.</div>
+      </footer>
     </div>
   );
 } 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './FeaturePages.css';
 
 const foodOptions = [
@@ -83,6 +84,25 @@ export default function ProgressTracker() {
 
   return (
     <div className="feature-page-bg">
+      {/* Navbar */}
+      <header className="navbar">
+        <div className="navbar-left">
+          <span className="logo-icon">&#128717;</span>
+          <span className="logo-text">RecipeGenie</span>
+        </div>
+        <nav className="navbar-center">
+          <Link to="/services/recipe-finder" className="nav-link">Recipe Finder</Link>
+          <Link to="/services/water-tracker" className="nav-link">Water Tracker</Link>
+          <Link to="/services/my-progress" className="nav-link active">Progress Tracker</Link>
+          <Link to="/services/grocery-list" className="nav-link">Grocery List</Link>
+        </nav>
+        <div className="navbar-right">
+          <Link to="/login" className="login-btn">Login</Link>
+          <Link to="/signup" className="signup-btn">Sign Up</Link>
+        </div>
+      </header>
+
+      {/* Main Content */}
       <section className="feature-hero">
         <h1 className="feature-title neon-green">My Progress</h1>
         <p className="feature-sub">Track your nutrition journey and celebrate your achievements</p>
@@ -193,6 +213,38 @@ export default function ProgressTracker() {
           <AchievementsGrid />
         </>
       )}
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-content">
+          <div className="footer-brand">
+            <div className="footer-logo neon-gradient">RecipeGenie</div>
+            <div className="footer-desc">Pioneering the future with cutting-edge technology solutions that illuminate possibilities.</div>
+            <div className="footer-socials"></div>
+          </div>
+          <div className="footer-links">
+            <div className="footer-links-title neon-gradient">Quick Links</div>
+            <Link to="/">Home</Link>
+            <Link to="/about">About Us</Link>
+            <Link to="/services">Services</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
+          </div>
+          <div className="footer-contact">
+            <div className="footer-links-title neon-gradient">Contact Info</div>
+            <div>contact@recipegenie.com</div>
+            <div>+1 (555) 123-4567</div>
+            <div>San Francisco, CA</div>
+          </div>
+          <div className="footer-newsletter">
+            <div className="footer-links-title neon-gradient">Stay Updated</div>
+            <input type="email" placeholder="Enter your email" />
+            <button className="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+        <div className="footer-bottom">© 2025 RecipeGenie. All rights reserved.</div>
+      </footer>
     </div>
   );
 } 
