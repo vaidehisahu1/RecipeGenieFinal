@@ -3,30 +3,29 @@ import { useNavigate } from 'react-router-dom';
 import './FeaturePages.css';
 
 const recipes = [
-  // Egg
-  { name: 'Masala Omelette', emoji: '🍳', main: 'Egg', goal: 'Easy to Make', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80', ingredients: ['Egg', 'Onion', 'Tomato', 'Chili', 'Salt', 'Coriander'], calories: 180, protein: 12, fat: 14, carbs: 4, time: '10 min' },
-  { name: 'Egg Fried Rice', emoji: '🍳', main: 'Egg', goal: 'Family Meal', image: 'https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80', ingredients: ['Egg', 'Rice', 'Onion', 'Soy sauce', 'Carrot', 'Garlic'], calories: 320, protein: 10, fat: 8, carbs: 45, time: '15 min' },
-  { name: 'Egg Curry', emoji: '🍳', main: 'Egg', goal: 'Weight Gain', image: 'https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80', ingredients: ['Egg', 'Onion', 'Tomato', 'Ginger', 'Garlic', 'Spices'], calories: 220, protein: 14, fat: 16, carbs: 8, time: '25 min' },
-  { name: 'Boiled Egg Salad', emoji: '🍳', main: 'Egg', goal: 'Weight Loss', image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80', ingredients: ['Egg', 'Cucumber', 'Lettuce', 'Lemon', 'Chili', 'Salt'], calories: 120, protein: 10, fat: 7, carbs: 3, time: '8 min' },
-  { name: 'Egg Sandwich', emoji: '🍳', main: 'Egg', goal: 'Quick Snack', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80', ingredients: ['Egg', 'Bread', 'Onion', 'Mayo', 'Pepper', 'Salt'], calories: 250, protein: 13, fat: 10, carbs: 28, time: '8 min' },
-  // Chicken
-  { name: 'Chicken Curry', emoji: '🍗', main: 'Chicken', goal: 'Family Meal', image: 'https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80', ingredients: ['Chicken', 'Onion', 'Tomato', 'Ginger', 'Spices', 'Oil'], calories: 340, protein: 24, fat: 16, carbs: 12, time: '30 min' },
-  { name: 'Grilled Chicken', emoji: '🍗', main: 'Chicken', goal: 'Weight Loss', image: 'https://images.unsplash.com/photo-1506089676908-3592f7389d4d?auto=format&fit=crop&w=400&q=80', ingredients: ['Chicken', 'Lemon', 'Garlic', 'Pepper', 'Salt', 'Olive oil'], calories: 220, protein: 28, fat: 7, carbs: 2, time: '20 min' },
-  { name: 'Chicken Fried Rice', emoji: '🍗', main: 'Chicken', goal: 'Easy to Make', image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80', ingredients: ['Chicken', 'Rice', 'Onion', 'Garlic', 'Soy sauce', 'Veggies'], calories: 350, protein: 16, fat: 10, carbs: 48, time: '18 min' },
-  { name: 'Chicken Wrap', emoji: '🍗', main: 'Chicken', goal: 'Quick Snack', image: 'https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80', ingredients: ['Chicken', 'Roti', 'Onion', 'Tomato', 'Mayo', 'Lettuce'], calories: 270, protein: 14, fat: 8, carbs: 32, time: '12 min' },
-  { name: 'Butter Chicken', emoji: '🍗', main: 'Chicken', goal: 'Weight Gain', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80', ingredients: ['Chicken', 'Cream', 'Butter', 'Tomato', 'Spices', 'Milk'], calories: 420, protein: 22, fat: 24, carbs: 18, time: '35 min' },
-  // Milk
-  { name: 'Kheer', emoji: '🥛', main: 'Milk', goal: 'Family Meal', image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80', ingredients: ['Milk', 'Rice', 'Sugar', 'Cardamom', 'Almonds', 'Raisins'], calories: 210, protein: 7, fat: 6, carbs: 38, time: '25 min' },
-  { name: 'Banana Shake', emoji: '🥛', main: 'Milk', goal: 'Weight Gain', image: 'https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80', ingredients: ['Milk', 'Banana', 'Sugar', 'Cardamom', 'Ice'], calories: 180, protein: 5, fat: 2, carbs: 32, time: '7 min' },
-  { name: 'Fruit Custard', emoji: '🥛', main: 'Milk', goal: 'Quick Snack', image: 'https://images.unsplash.com/photo-1506089676908-3592f7389d4d?auto=format&fit=crop&w=400&q=80', ingredients: ['Milk', 'Custard powder', 'Apple', 'Banana', 'Sugar', 'Grape'], calories: 160, protein: 4, fat: 3, carbs: 36, time: '15 min' },
-  { name: 'Spiced Warm Milk', emoji: '🥛', main: 'Milk', goal: 'Easy to Make', image: 'https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80', ingredients: ['Milk', 'Cardamom', 'Turmeric', 'Honey', 'Pepper', 'Ginger'], calories: 120, protein: 4, fat: 3, carbs: 18, time: '8 min' },
-  { name: 'Milk Oats Bowl', emoji: '🥛', main: 'Milk', goal: 'Weight Loss', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80', ingredients: ['Milk', 'Oats', 'Apple', 'Banana', 'Chia', 'Honey'], calories: 190, protein: 6, fat: 3, carbs: 32, time: '10 min' },
-  // Rice/Wheat/Fruit
-  { name: 'Lemon Rice', emoji: '🍚', main: 'Rice', goal: 'Less Oil', image: 'https://images.unsplash.com/photo-1506089676908-3592f7389d4d?auto=format&fit=crop&w=400&q=80', ingredients: ['Rice', 'Lemon', 'Mustard seeds', 'Chili', 'Curry leaves', 'Salt'], calories: 210, protein: 4, fat: 5, carbs: 42, time: '15 min' },
-  { name: 'Vegetable Rice Bowl', emoji: '🍚', main: 'Rice', goal: 'Weight Loss', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80', ingredients: ['Rice', 'Carrot', 'Beans', 'Salt', 'Chili', 'Onion'], calories: 180, protein: 4, fat: 1, carbs: 38, time: '12 min' },
-  { name: 'Mango Lassi', emoji: '🥛', main: 'Milk', goal: 'Weight Gain', image: 'https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80', ingredients: ['Curd', 'Milk', 'Mango', 'Sugar', 'Cardamom', 'Ice'], calories: 220, protein: 6, fat: 4, carbs: 38, time: '10 min' },
-  { name: 'Fruit Salad', emoji: '🍚', main: 'Fruit', goal: 'Less Oil', image: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80', ingredients: ['Apple', 'Banana', 'Papaya', 'Orange', 'Mint', 'Lemon'], calories: 110, protein: 2, fat: 1, carbs: 24, time: '8 min' },
-  { name: 'Rice Fruit Bowl', emoji: '🍚', main: 'Rice', goal: 'Easy to Make', image: 'https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80', ingredients: ['Rice', 'Banana', 'Milk', 'Honey', 'Cardamom', 'Almonds'], calories: 160, protein: 3, fat: 2, carbs: 32, time: '10 min' },
+  { name: 'Zesty Egg Bowl', emoji: '🥚', main: 'Egg', goal: 'Weight Loss', ingredients: ['egg', 'spinach', 'garlic', 'tomato', 'onion', 'mint'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Creamy Egg Wrap', emoji: '🥚', main: 'Egg', goal: 'Weight Gain', ingredients: ['egg', 'cheese', 'mayo', 'bread', 'tomato', 'onion'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Creamy Egg Curry', emoji: '🥚', main: 'Egg', goal: 'Family Meal', ingredients: ['egg', 'onion', 'tomato', 'cream', 'ginger', 'garlic'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Quick Egg Bites', emoji: '🥚', main: 'Egg', goal: 'Quick Snack', ingredients: ['egg', 'tomato', 'lemon juice', 'onion', 'spinach', 'garlic'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Grilled Egg Salad', emoji: '🥚', main: 'Egg', goal: 'Quick Snack', ingredients: ['egg', 'garlic', 'mustard seeds', 'oil', 'cinnamon', 'paneer'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Fruity Egg Delight', emoji: '🥚', main: 'Egg', goal: 'Less Oil', ingredients: ['egg', 'fruit', 'onion', 'cinnamon', 'coriander', 'curd'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Simple Egg Toast', emoji: '🥚', main: 'Egg', goal: 'Easy to Make', ingredients: ['egg', 'bread', 'butter', 'salt', 'pepper', 'tomato'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Rice and Egg Bowl', emoji: '🥚', main: 'Egg', goal: 'Easy to Make', ingredients: ['rice', 'egg', 'onion', 'chili', 'tomato', 'coriander'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Spicy Chicken Salad', emoji: '🍗', main: 'Chicken', goal: 'Weight Loss', ingredients: ['chicken', 'lettuce', 'tomato', 'onion', 'lemon juice', 'pepper'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Grilled Chicken Curry', emoji: '🍗', main: 'Chicken', goal: 'Weight Gain', ingredients: ['chicken', 'butter', 'tomato', 'ginger', 'garlic', 'cream'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Spicy Chicken Rice Bowl', emoji: '🍗', main: 'Chicken', goal: 'Family Meal', ingredients: ['chicken', 'rice', 'onion', 'garlic', 'tomato', 'curd'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Zesty Chicken Toast', emoji: '🍗', main: 'Chicken', goal: 'Family Meal', ingredients: ['chicken', 'bread', 'onion', 'mayo', 'chili flakes', 'garlic'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Minimal Chicken Stir-fry', emoji: '🍗', main: 'Chicken', goal: 'Less Oil', ingredients: ['chicken', 'capsicum', 'garlic', 'ginger', 'chili', 'lemon juice'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Basic Chicken Skillet', emoji: '🍗', main: 'Chicken', goal: 'Easy to Make', ingredients: ['chicken', 'onion', 'garlic', 'tomato', 'oil', 'salt'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Creamy Milk Smoothie', emoji: '🥛', main: 'Milk', goal: 'Weight Gain', ingredients: ['milk', 'banana', 'peanut butter', 'honey', 'curd', 'cardamom'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Sweet Rice Delight', emoji: '🥛', main: 'Milk', goal: 'Weight Gain', ingredients: ['rice', 'milk', 'dry fruits', 'sugar', 'cardamom', 'ghee'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Healthy Milk Salad', emoji: '🥛', main: 'Milk', goal: 'Quick Snack', ingredients: ['milk', 'salt', 'onion', 'pepper', 'curd', 'cheese'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Sweet Milk Porridge', emoji: '🥛', main: 'Milk', goal: 'Easy to Make', ingredients: ['milk', 'oats', 'sugar', 'dry fruits', 'cardamom', 'cinnamon'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Healthy Rice Delight', emoji: '🍚', main: 'Rice', goal: 'Weight Loss', ingredients: ['rice', 'capsicum', 'carrot', 'lemon juice', 'onion', 'chili'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Healthy Fruit Rice Skillet', emoji: '🍚', main: 'Rice', goal: 'Family Meal', ingredients: ['rice', 'fruit', 'cinnamon', 'honey', 'cardamom', 'butter'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Steamed Rice Bites', emoji: '🍚', main: 'Rice', goal: 'Less Oil', ingredients: ['rice', 'curd', 'ginger', 'mustard seeds', 'green chili', 'lemon juice'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Creamy Fruit Salad', emoji: '🍓', main: 'Fruit', goal: 'Weight Loss', ingredients: ['fruit', 'curd', 'mint', 'honey', 'cinnamon', 'cardamom'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
+  { name: 'Fruit Yogurt Mix', emoji: '🍓', main: 'Fruit', goal: 'Easy to Make', ingredients: ['fruit', 'curd', 'honey', 'mint', 'cinnamon', 'cardamom'], image: '', calories: '', protein: '', fat: '', carbs: '', time: '' },
 ];
 
 const goalOptions = ['All', 'Weight Loss', 'Weight Gain', 'Family Meal', 'Quick Snack', 'Less Oil', 'Easy to Make'];
@@ -34,13 +33,31 @@ const mainOptions = ['All', 'Egg', 'Chicken', 'Milk', 'Rice', 'Fruit'];
 
 function filterRecipes(recipes, ingredientFilter, goalFilter, mainFilter) {
   let filtered = recipes;
-  if (ingredientFilter.length > 0) {
-    filtered = filtered.filter(r => ingredientFilter.every(i => r.ingredients.map(ing => ing.toLowerCase()).includes(i)));
+  // Special logic: if ingredientFilter is a single main ingredient, show all recipes for that main
+  if (ingredientFilter.length === 1) {
+    const mainMap = {
+      egg: 'Egg',
+      chicken: 'Chicken',
+      milk: 'Milk',
+      rice: 'Rice',
+      fruit: 'Fruit',
+      fruits: 'Fruit',
+    };
+    const mainKey = ingredientFilter[0].toLowerCase();
+    if (mainMap[mainKey]) {
+      filtered = recipes.filter(r => r.main === mainMap[mainKey] || r.ingredients.map(i => i.toLowerCase()).includes(mainKey));
+    } else {
+      filtered = recipes.filter(r => ingredientFilter.every(i => r.ingredients.map(ing => ing.toLowerCase()).includes(i)));
+    }
+  } else if (ingredientFilter.length > 0) {
+    filtered = recipes.filter(r => ingredientFilter.every(i => r.ingredients.map(ing => ing.toLowerCase()).includes(i)));
   }
-  if (goalFilter && goalFilter !== 'All') {
+  // Filtering logic: intersection or single filter
+  if (goalFilter !== 'All' && mainFilter !== 'All') {
+    filtered = filtered.filter(r => r.goal === goalFilter && r.main === mainFilter);
+  } else if (goalFilter !== 'All') {
     filtered = filtered.filter(r => r.goal === goalFilter);
-  }
-  if (mainFilter && mainFilter !== 'All') {
+  } else if (mainFilter !== 'All') {
     filtered = filtered.filter(r => r.main === mainFilter);
   }
   return filtered;
@@ -100,7 +117,7 @@ export default function RecipeFinder() {
       </section>
       <div className="recipe-grid">
         {filteredRecipes.length === 0 && (
-          <div style={{ color: '#ff5eae', fontWeight: 600, margin: '2em auto' }}>No recipes found. Try different ingredients or a different goal.</div>
+          <div style={{ color: '#ff5eae', fontWeight: 600, margin: '2em auto' }}>No recipes found. Try a new combination.</div>
         )}
         {filteredRecipes.map((r) => (
           <div className={`recipe-card badge-${r.goal.replace(/\s/g, '').toLowerCase()}`} key={r.name}>

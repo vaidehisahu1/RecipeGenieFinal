@@ -1,58 +1,59 @@
-/* Neon Dark Feature Pages Styles */
+/* Foody color palette, original layout/structure */
 
 .feature-page-bg {
-  background: #0a0a23;
+  background: var(--color-bg);
+  color: var(--color-text);
   min-height: 100vh;
-  color: #e0e0fa;
   padding-bottom: 3rem;
 }
 
 .feature-hero {
   text-align: center;
   padding: 3rem 1rem 2rem 1rem;
-  background: linear-gradient(90deg, #0a0a23 60%, #181a20 100%);
+  background: var(--color-bg-secondary);
 }
 .feature-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
+  color: var(--color-accent2);
 }
 .neon-green {
-  color: #dfe6f3;
-  text-shadow: 0 0 12px #baff3988, 0 0 24px #baff3944;
+  color: var(--color-accent);
+  text-shadow: 0 0 8px #ffd60044, 0 0 16px #ff525222;
 }
 .neon-pink {
-  color: #ff5eae;
-  text-shadow: 0 0 12px #ff5eae88, 0 0 24px #ff5eae44;
+  color: var(--color-accent2);
+  text-shadow: 0 0 8px #ff525244, 0 0 16px #ffd60044;
 }
 .feature-sub {
-  color: #b0b0b0;
+  color: var(--color-text);
   font-size: 1.2rem;
   margin: 0 auto;
   max-width: 600px;
 }
 
 .feature-card {
-  background: #10112a;
+  background: var(--color-card);
   border-radius: 18px;
-  box-shadow: 0 0 24px #00ffd044;
+  box-shadow: 0 2px 16px #ffd60022;
   padding: 2rem 1.5rem;
   max-width: 500px;
   margin: 2.5rem auto 0 auto;
-  color: #e0e0fa;
+  color: var(--color-text);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .feature-card h2 {
-  color: #5b5bdf;
+  color: var(--color-accent2);
   margin-bottom: 1em;
 }
 .feature-input {
-  background: #181a20;
-  color: #e0e0fa;
-  border: 1.5px solid #94a3e7;
+  background: #fff;
+  color: var(--color-text);
+  border: 1.5px solid var(--color-accent3);
   border-radius: 8px;
   padding: 0.7em 1em;
   font-size: 1em;
@@ -62,27 +63,27 @@
   margin-right: 0.5em;
 }
 .feature-btn-gradient {
-  background: linear-gradient(90deg, #1d72db 0%, #39ffb0 100%);
-  color: #181a20;
+  background: var(--color-accent2);
+  color: #fff;
   border: none;
   border-radius: 8px;
   padding: 0.7em 1.5em;
   font-weight: 700;
   font-size: 1em;
-  box-shadow: 0 0 8px #baff3988;
+  box-shadow: 0 0 8px #ff525244;
   margin-top: 1em;
   margin-bottom: 1em;
   transition: background 0.2s, color 0.2s;
   cursor: pointer;
 }
 .feature-btn-gradient:hover {
-  background: linear-gradient(90deg, #39ffb0 0%, #baff39 100%);
-  color: #232946;
+  background: var(--color-accent);
+  color: var(--color-text);
 }
 .feature-btn-outline {
   background: none;
-  color: #baff39;
-  border: 1.5px solid #5d89d7;
+  color: var(--color-accent3);
+  border: 1.5px solid var(--color-accent3);
   border-radius: 8px;
   padding: 0.7em 1.5em;
   font-weight: 700;
@@ -92,297 +93,17 @@
   transition: background 0.2s, color 0.2s;
 }
 .feature-btn-outline:hover {
-  background: #baff39;
-  color: #181a20;
+  background: var(--color-accent3);
+  color: #fff;
 }
 .feature-btn-outline.danger {
-  border-color: #ff5eae;
-  color: #ff5eae;
+  border-color: var(--color-accent2);
+  color: var(--color-accent2);
 }
 .feature-btn-outline.danger:hover {
-  background: #ff5eae;
-  color: #181a20;
-}
-
-/* Water Tracker Styles */
-.water-progress-circle {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 3px solid #39ffb0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1.5em auto 1em auto;
-  font-size: 1.3em;
-  color: #baff39;
-  box-shadow: 0 0 24px #39ffb088;
-}
-.water-amount {
-  font-size: 2em;
-  font-weight: 700;
-}
-.water-goal {
-  font-size: 1em;
-  color: #b0b0b0;
-}
-.water-progress-bar-bg {
-  width: 100%;
-  height: 14px;
-  background: #232946;
-  border-radius: 8px;
-  margin: 1em 0;
-  overflow: hidden;
-}
-.water-progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, #39ffb0 0%, #baff39 100%);
-  border-radius: 8px;
-  transition: width 0.4s;
-}
-.water-btn-row {
-  display: flex;
-  gap: 1em;
-  justify-content: center;
-  margin-bottom: 1em;
-}
-.water-custom-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-  margin-bottom: 1em;
-}
-.custom-amount-label {
-  color: #baff39;
-  font-weight: 600;
-  font-size: 1.1em;
-}
-.water-action-row {
-  display: flex;
-  gap: 1em;
-  justify-content: center;
-}
-
-/* Progress Tracker Styles */
-.progress-summary-row {
-  display: flex;
-  gap: 2em;
-  justify-content: center;
-  margin: 2em 0 1em 0;
-}
-.progress-summary-card {
-  background: #181a20;
-  border-radius: 14px;
-  box-shadow: 0 0 12px #baff3944;
-  padding: 1.2em 2em;
-  color: #e0e0fa;
-  min-width: 180px;
-  text-align: center;
-}
-.progress-summary-card h3 {
-  color: #baff39;
-  margin-bottom: 0.5em;
-}
-.progress-bar-bg {
-  width: 100%;
-  height: 10px;
-  background: #232946;
-  border-radius: 6px;
-  margin: 0.5em 0;
-  overflow: hidden;
-}
-.progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, #baff39 0%, #39ffb0 100%);
-  border-radius: 6px;
-  transition: width 0.4s;
-}
-.progress-summary-label {
-  color: #b0b0b0;
-  font-size: 1em;
-  margin-top: 0.5em;
-}
-.progress-macros-row {
-  background: #181a20;
-  border-radius: 14px;
-  box-shadow: 0 0 12px #baff3944;
-  padding: 1.2em 2em;
-  color: #e0e0fa;
-  max-width: 500px;
-  margin: 1.5em auto;
-}
-.macro-bar {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  margin-bottom: 0.7em;
-}
-.macro-bar span {
-  min-width: 70px;
-  color: #baff39;
-}
-.progress-achievements-row {
-  background: #181a20;
-  border-radius: 14px;
-  box-shadow: 0 0 12px #baff3944;
-  padding: 1.2em 2em;
-  color: #e0e0fa;
-  max-width: 500px;
-  margin: 1.5em auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: center;
-}
-.achievement-card {
-  background: #232946;
-  border-radius: 10px;
-  padding: 0.7em 1.2em;
-  color: #baff39;
-  font-weight: 600;
-  box-shadow: 0 0 8px #baff3988;
-  margin-bottom: 0.5em;
-}
-.neon-glow {
-  box-shadow: 0 0 16px #baff3988, 0 0 32px #baff3944;
-}
-
-/* Grocery List Styles */
-.grocery-input-row {
-  display: flex;
-  gap: 0.7em;
-  margin-bottom: 1em;
-  width: 100%;
-}
-.grocery-list-row {
-  margin-top: 1em;
-  width: 100%;
-}
-.grocery-list-item {
-  background: #232946;
-  border-radius: 8px;
-  padding: 0.7em 1.2em;
-  color: #e0e0fa;
-  margin-bottom: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.1em;
-}
-.grocery-tag {
-  background: #39ffb0;
-  color: #181a20;
-  border-radius: 8px;
-  padding: 0.2em 0.8em;
-  font-size: 0.9em;
-  margin-left: 0.7em;
-  font-weight: 600;
-  box-shadow: 0 0 8px #39ffb088;
-  display: inline-block;
-}
-.grocery-list-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em 2em;
-  margin: 1.5em 0 1em 0;
-}
-.grocery-list-checkbox {
-  display: flex;
-  align-items: center;
-  background: #181a20;
-  border-radius: 10px;
-  padding: 0.7em 1.2em;
-  color: #e0e0fa;
-  font-size: 1.1em;
-  box-shadow: 0 0 8px #00ffd044;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  border: 2px solid transparent;
-}
-.grocery-list-checkbox input[type="checkbox"] {
-  margin-right: 1em;
-  accent-color: #baff39;
-  width: 1.2em;
-  height: 1.2em;
-}
-.grocery-list-checkbox.checked {
-  background: #232946;
-  color: #baff39;
-  border: 2px solid #baff39;
-  text-decoration: line-through;
-  opacity: 0.7;
-}
-
-.achievements-section {
-  margin: 2.5em auto 1.5em auto;
-  max-width: 900px;
-  background: none;
-}
-.achievements-section h3 {
-  font-size: 1.3em;
+  background: var(--color-accent2);
   color: #fff;
-  margin-bottom: 1em;
-  text-align: left;
 }
-.achievements-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2em;
-}
-.achievement-card2 {
-  background: #181a20;
-  border-radius: 14px;
-  box-shadow: 0 0 12px #baff3944;
-  padding: 1.2em 2em 1.2em 2em;
-  color: #e0e0fa;
-  display: flex;
-  align-items: center;
-  gap: 1.2em;
-  border: 2px solid transparent;
-  position: relative;
-  min-height: 70px;
-}
-.neon-glow2 {
-  border: 2px solid #ffe066;
-  box-shadow: 0 0 24px #ffe06688, 0 0 32px #ffe06644;
-}
-.achievement-icon {
-  font-size: 2em;
-  margin-right: 0.7em;
-  flex-shrink: 0;
-}
-.achievement-title {
-  font-weight: 700;
-  color: #fff;
-  font-size: 1.1em;
-  margin-bottom: 0.2em;
-}
-.achievement-desc {
-  color: #b0b0b0;
-  font-size: 1em;
-  font-weight: 400;
-}
-@media (max-width: 700px) {
-  .achievements-grid {
-    grid-template-columns: 1fr;
-  }
-  .achievement-card2 {
-    padding: 1em 1em;
-  }
-  .grocery-list-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-  .progress-summary-row {
-    flex-direction: column;
-    gap: 1em;
-    align-items: center;
-  }
-} 
 
 .recipe-filters-row {
   display: flex;
@@ -391,22 +112,23 @@
   margin: 2em 0 2em 0;
 }
 .recipe-filter-card {
-  background: #050914;
+  background: var(--color-card);
   border-radius: 14px;
-  box-shadow: 0 0 12px #00ffd044;
+  box-shadow: 0 2px 16px #ffd60022;
   padding: 1.2em 2em 1.2em 2em;
-  color: #37377f;
+  color: var(--color-text);
   min-width: 260px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 .filter-title {
-  color: #baff39;
+  color: var(--color-accent2);
   font-weight: 700;
   margin-bottom: 0.7em;
   font-size: 1.1em;
 }
+
 .recipe-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -416,11 +138,11 @@
   padding: 0 1em;
 }
 .recipe-card {
-  background: #905f5f;
+  background: var(--color-card);
   border-radius: 22px;
-  box-shadow: 0 4px 32px 0 #0ff0fc22, 0 1.5px 0 #232946;
+  box-shadow: 0 2px 16px #ffd60022;
   padding: 0 0 1.5em 0;
-  color: #7fdfff;
+  color: var(--color-text);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -433,8 +155,8 @@
   font-family: 'Poppins', 'Montserrat', 'Roboto', Arial, Helvetica, sans-serif;
 }
 .recipe-card:hover {
-  box-shadow: 0 0 32px 2px #38e8ffcc, 0 0 48px 8px #38e8ff33;
-  border: 1.5px solid #38e8ff;
+  box-shadow: 0 0 32px 2px #ffd600cc, 0 0 48px 8px #ff525244;
+  border: 1.5px solid var(--color-accent2);
   transform: translateY(-4px) scale(1.01);
   z-index: 2;
 }
@@ -455,7 +177,7 @@
   padding: 0 1.2em;
 }
 .recipe-title {
-  color: #38e8ff;
+  color: var(--color-accent2);
   font-size: 1.25rem;
   font-weight: 700;
   margin-right: auto;
@@ -466,23 +188,23 @@
   font-weight: 600;
   border-radius: 999px;
   padding: 0.2em 1.2em;
-  color: #3e66c3;
-  background: #000e10;
-  box-shadow: 0 0 8px #38e8ff88;
-  position: absolute;
-  top: 18px;
-  right: 18px;
+  color: #fff;
+  background: var(--color-accent2);
+  box-shadow: 0 0 8px #ff525244;
+  position: relative;
+  top: 0;
+  right: 0;
   z-index: 3;
   letter-spacing: 0.02em;
 }
 .recipe-ingredients-list {
-  color: #7fdfff;
+  color: var(--color-text);
   font-size: 1em;
   margin: 0.5em 1.2em 0.7em 1.2em;
   font-family: inherit;
 }
 .recipe-description {
-  color: #7fdfff;
+  color: var(--color-text);
   font-size: 1em;
   margin: 0.2em 1.2em 0.7em 1.2em;
   font-family: inherit;
@@ -492,7 +214,7 @@
   flex-wrap: wrap;
   gap: 0.7em 1.2em;
   margin: 0.5em 1.2em 1.2em 1.2em;
-  color: #38e8ff;
+  color: var(--color-accent3);
   font-size: 1em;
   font-family: inherit;
 }
@@ -501,50 +223,290 @@
   align-items: center;
   font-size: 1em;
   font-weight: 500;
-  color: #38e8ff;
+  color: var(--color-accent3);
   margin-right: 0.7em;
 }
-.recipe-macros .macro-cal { color: #ffb347; }
-.recipe-macros .macro-time { color: #38e8ff; }
-.recipe-macros .macro-protein { color: #39ff14; }
-.recipe-macros .macro-carbs { color: #b366ff; }
-.recipe-macros .macro-fat { color: #38e8ff; }
-.recipe-macros .macro-serves { color: #7fdfff; }
-.feature-btn-gradient {
-  background: linear-gradient(90deg, #38e8ff 0%, #b366ff 100%);
+.badge-weightloss, .badge-weightgain, .badge-familymeal, .badge-quicksnack, .badge-lessoil, .badge-easytomake {
+  background: var(--color-accent);
   color: #fff;
-  border: none;
-  border-radius: 14px;
-  padding: 1em 0;
+}
+
+/* Water Tracker Styles */
+.water-progress-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid var(--color-accent3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5em auto 1em auto;
+  font-size: 1.3em;
+  color: var(--color-accent3);
+  box-shadow: 0 0 24px #43a04744;
+}
+.water-amount {
+  font-size: 2em;
   font-weight: 700;
-  font-size: 1.1em;
-  box-shadow: 0 0 8px #38e8ff88;
-  margin: 0 1.2em;
-  margin-top: 1.2em;
-  width: calc(100% - 2.4em);
-  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
-  cursor: pointer;
+}
+.water-goal {
+  font-size: 1em;
+  color: var(--color-text);
+}
+.water-progress-bar-bg {
+  width: 100%;
+  height: 14px;
+  background: var(--color-bg-secondary);
+  border-radius: 8px;
+  margin: 1em 0;
+  overflow: hidden;
+}
+.water-progress-bar {
+  height: 100%;
+  background: var(--color-accent3);
+  border-radius: 8px;
+  transition: width 0.4s;
+}
+.water-btn-row {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+.water-custom-row {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.custom-amount-label {
+  color: var(--color-accent3);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.water-action-row {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+/* Progress Tracker Styles */
+.progress-summary-row {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  margin: 2em 0 1em 0;
+}
+.progress-summary-card {
+  background: var(--color-card);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #ffd60022;
+  padding: 1.2em 2em;
+  color: var(--color-text);
+  min-width: 180px;
+  text-align: center;
+}
+.progress-summary-card h3 {
+  color: var(--color-accent2);
+  margin-bottom: 0.5em;
+}
+.progress-bar-bg {
+  width: 100%;
+  height: 10px;
+  background: var(--color-bg-secondary);
+  border-radius: 6px;
+  margin: 0.5em 0;
+  overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 6px;
+  transition: width 0.4s;
+}
+.progress-summary-label {
+  color: var(--color-text);
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+.progress-macros-row {
+  background: var(--color-card);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #ffd60022;
+  padding: 1.2em 2em;
+  color: var(--color-text);
+  max-width: 500px;
+  margin: 1.5em auto;
+}
+.macro-bar {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.7em;
+}
+.macro-bar span {
+  min-width: 70px;
+  color: var(--color-accent3);
+}
+.progress-achievements-row {
+  background: var(--color-card);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #ffd60022;
+  padding: 1.2em 2em;
+  color: var(--color-text);
+  max-width: 500px;
+  margin: 1.5em auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.achievement-card {
+  background: var(--color-bg-secondary);
+  border-radius: 10px;
+  padding: 0.7em 1.2em;
+  color: var(--color-accent3);
+  font-weight: 600;
+  box-shadow: 0 0 8px #43a04744;
+  margin-bottom: 0.5em;
+}
+.neon-glow {
+  box-shadow: 0 0 16px #ffd60044, 0 0 32px #ff525222;
+}
+
+/* Grocery List Styles */
+.grocery-input-row {
+  display: flex;
   gap: 0.7em;
+  margin-bottom: 1em;
+  width: 100%;
 }
-.feature-btn-gradient:hover {
-  background: linear-gradient(90deg, #38e8ff 0%, #b366ff 100%);
-  color: #121212;
-  box-shadow: 0 0 24px #38e8ffcc, 0 0 48px #b366ff44;
+.grocery-list-row {
+  margin-top: 1em;
+  width: 100%;
 }
-.badge-weightloss, .badge-weightgain, .badge-familymeal, .badge-quicksnack, .badge-lessoil, .badge-easytomake {
-  background: #000b0d !important;
-  color: #121212 !important;
+.grocery-list-item {
+  background: var(--color-bg-secondary);
+  border-radius: 8px;
+  padding: 0.7em 1.2em;
+  color: var(--color-text);
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.1em;
 }
+.grocery-tag {
+  background: var(--color-accent3);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.2em 0.8em;
+  font-size: 0.9em;
+  margin-left: 0.7em;
+  font-weight: 600;
+  box-shadow: 0 0 8px #43a04744;
+  display: inline-block;
+}
+.grocery-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em 2em;
+  margin: 1.5em 0 1em 0;
+}
+.grocery-list-checkbox {
+  display: flex;
+  align-items: center;
+  background: var(--color-bg-secondary);
+  border-radius: 10px;
+  padding: 0.7em 1.2em;
+  color: var(--color-text);
+  font-size: 1.1em;
+  box-shadow: 0 0 8px #ffd60022;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border: 2px solid transparent;
+}
+.grocery-list-checkbox input[type="checkbox"] {
+  margin-right: 1em;
+  accent-color: var(--color-accent3);
+  width: 1.2em;
+  height: 1.2em;
+}
+.grocery-list-checkbox.checked {
+  background: var(--color-accent3);
+  color: #fff;
+  border: 2px solid var(--color-accent3);
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.achievements-section {
+  margin: 2.5em auto 1.5em auto;
+  max-width: 900px;
+  background: none;
+}
+.achievements-section h3 {
+  font-size: 1.3em;
+  color: var(--color-accent2);
+  margin-bottom: 1em;
+  text-align: left;
+}
+.achievements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2em;
+}
+.achievement-card2 {
+  background: var(--color-card);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #ffd60022;
+  padding: 1.2em 2em 1.2em 2em;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  border: 2px solid transparent;
+  position: relative;
+  min-height: 70px;
+}
+.neon-glow2 {
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 24px #ffd60044, 0 0 32px #ff525222;
+}
+.achievement-icon {
+  font-size: 2em;
+  margin-right: 0.7em;
+  flex-shrink: 0;
+}
+.achievement-title {
+  font-weight: 700;
+  color: var(--color-accent2);
+  font-size: 1.1em;
+  margin-bottom: 0.2em;
+}
+.achievement-desc {
+  color: var(--color-text);
+  font-size: 1em;
+  font-weight: 400;
+}
+@media (max-width: 700px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+  .achievement-card2 {
+    padding: 1em 1em;
+  }
+  .grocery-list-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 900px) {
-  .recipe-filters-row {
+  .progress-summary-row {
     flex-direction: column;
     gap: 1em;
     align-items: center;
-  }
-  .recipe-grid {
-    grid-template-columns: 1fr;
   }
 } 
