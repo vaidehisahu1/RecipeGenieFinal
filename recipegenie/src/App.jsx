@@ -8,6 +8,8 @@ import RecipeFinder from './pages/RecipeFinder';
 import WaterIntakeTracker from './pages/WaterIntakeTracker';
 import ProgressTracker from './pages/ProgressTracker';
 import GroceryList from './pages/GroceryList';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/services/grocery-list" element={<GroceryList />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>
   );
