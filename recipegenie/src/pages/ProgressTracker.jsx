@@ -3,13 +3,31 @@ import { Link } from 'react-router-dom';
 import './FeaturePages.css';
 
 const foodOptions = [
-  { name: 'Oatmeal with berries', calories: 320, protein: 10, carbs: 55, fat: 5 },
-  { name: 'Grilled chicken salad', calories: 450, protein: 35, carbs: 30, fat: 12 },
-  { name: 'Salmon with quinoa', calories: 580, protein: 40, carbs: 60, fat: 18 },
-  { name: 'Egg white omelette', calories: 200, protein: 18, carbs: 3, fat: 7 },
-  { name: 'Greek yogurt parfait', calories: 180, protein: 12, carbs: 22, fat: 3 },
-  { name: 'Veggie stir fry', calories: 350, protein: 8, carbs: 60, fat: 8 },
-  { name: 'Protein shake', calories: 250, protein: 25, carbs: 10, fat: 4 },
+  { name: 'Zesty Egg Bowl', calories: 340, protein: 23, fat: 8, carbs: 44 },
+  { name: 'Creamy Egg Wrap', calories: 350, protein: 20, fat: 15, carbs: 30 },
+  { name: 'Creamy Egg Curry', calories: 300, protein: 15, fat: 20, carbs: 15 },
+  { name: 'Quick Egg Bites', calories: 250, protein: 15, fat: 18, carbs: 10 },
+  { name: 'Grilled Egg Salad', calories: 300, protein: 20, fat: 18, carbs: 12 },
+  { name: 'Fruity Egg Delight', calories: 280, protein: 12, fat: 16, carbs: 20 },
+  { name: 'Simple Egg Toast', calories: 200, protein: 12, fat: 16, carbs: 10 },
+  { name: 'Rice and Egg Bowl', calories: 500, protein: 18, fat: 15, carbs: 70 },
+  { name: 'Spicy Chicken Salad', calories: 320, protein: 30, fat: 12, carbs: 10 },
+  { name: 'Grilled Chicken Curry', calories: 400, protein: 28, fat: 18, carbs: 20 },
+  { name: 'Spicy Chicken Rice Bowl', calories: 520, protein: 27, fat: 16, carbs: 55 },
+  { name: 'Zesty Chicken Toast', calories: 350, protein: 22, fat: 14, carbs: 28 },
+  { name: 'Minimal Chicken Stir-fry', calories: 280, protein: 24, fat: 10, carbs: 15 },
+  { name: 'Basic Chicken Skillet', calories: 300, protein: 26, fat: 12, carbs: 18 },
+  { name: 'Creamy Milk Smoothie', calories: 350, protein: 14, fat: 12, carbs: 42 },
+  { name: 'Sweet Rice Delight', calories: 320, protein: 10, fat: 10, carbs: 50 },
+  { name: 'Healthy Milk Salad', calories: 260, protein: 12, fat: 10, carbs: 20 },
+  { name: 'Sweet Milk Porridge', calories: 290, protein: 11, fat: 9, carbs: 45 },
+  { name: 'Healthy Rice Delight', calories: 310, protein: 9, fat: 6, carbs: 58 },
+  { name: 'Healthy Fruit Rice Skillet', calories: 350, protein: 8, fat: 7, carbs: 62 },
+  { name: 'Steamed Rice Bites', calories: 250, protein: 6, fat: 4, carbs: 48 },
+  { name: 'Rice and Egg Bowl', calories: 500, protein: 18, fat: 15, carbs: 70 },
+  { name: 'Creamy Fruit Salad', calories: 270, protein: 6, fat: 12, carbs: 35 },
+  { name: 'Fruit Yogurt Mix', calories: 240, protein: 8, fat: 8, carbs: 32 },
+  { name: 'Fruity Egg Delight', calories: 280, protein: 12, fat: 16, carbs: 20 },
 ];
 const dailyGoals = { calories: 2000, protein: 120, carbs: 250, fat: 65 };
 const achievementsList = [
@@ -35,7 +53,7 @@ export default function ProgressTracker() {
   const [selectedFood, setSelectedFood] = useState('');
   const [selectedMeal, setSelectedMeal] = useState('Breakfast');
 
-  // Add this useEffect to sync with GroceryList completion
+  // If user comes from GroceryList with a completed meal, pre-select that recipe and prompt for meal type before adding
   useEffect(() => {
     const completed = localStorage.getItem('todaysMealsCompleted') === 'true';
     const todaysMeals = JSON.parse(localStorage.getItem('todaysMeals') || '[]');
@@ -46,6 +64,7 @@ export default function ProgressTracker() {
         const toAdd = todaysMeals.filter(m => !names.includes(m.name));
         return [...prev, ...toAdd.map(m => ({ ...m, meal: 'Lunch' }))];
       });
+      localStorage.setItem('todaysMealsCompleted', 'false');
     }
   }, []);
 

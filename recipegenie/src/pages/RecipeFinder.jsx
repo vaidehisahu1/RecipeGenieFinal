@@ -31,21 +31,17 @@ const recipes = [
   { name: 'Healthy Rice Delight', emoji: '🍚', main: 'Rice', goal: 'Weight Loss', ingredients: ['rice', 'capsicum', 'carrot', 'lemon juice', 'onion', 'chili'], image: '', calories: 310, protein: 9, fat: 6, carbs: 58, time: '' },
   { name: 'Healthy Fruit Rice Skillet', emoji: '🍚', main: 'Rice', goal: 'Family Meal', ingredients: ['rice', 'fruit', 'cinnamon', 'honey', 'cardamom', 'butter'], image: '', calories: 350, protein: 8, fat: 7, carbs: 62, time: '' },
   { name: 'Steamed Rice Bites', emoji: '🍚', main: 'Rice', goal: 'Less Oil', ingredients: ['rice', 'curd', 'ginger', 'mustard seeds', 'green chili', 'lemon juice'], image: '', calories: 250, protein: 6, fat: 4, carbs: 48, time: '' },
-  { name: 'Rice and Egg Bowl', emoji: '🍚', main: 'Rice', goal: 'Easy to Make', ingredients: ['rice', 'egg', 'onion', 'chili', 'tomato', 'coriander'], image: '', calories: 500, protein: 18, fat: 15, carbs: 70, time: '' },
 
   // 🍎 Fruit-Based Recipes
   { name: 'Creamy Fruit Salad', emoji: '🍓', main: 'Fruit', goal: 'Weight Loss', ingredients: ['fruit', 'curd', 'mint', 'honey', 'cinnamon', 'cardamom'], image: '', calories: 270, protein: 6, fat: 12, carbs: 35, time: '' },
   { name: 'Fruit Yogurt Mix', emoji: '🍓', main: 'Fruit', goal: 'Easy to Make', ingredients: ['fruit', 'curd', 'honey', 'mint', 'cinnamon', 'cardamom'], image: '', calories: 240, protein: 8, fat: 8, carbs: 32, time: '' },
-  { name: 'Fruity Egg Delight', emoji: '🥚', main: 'Egg', goal: 'Less Oil', ingredients: ['egg', 'fruit', 'onion', 'cinnamon', 'coriander', 'curd'], image: '', calories: 280, protein: 12, fat: 16, carbs: 20, time: '' },
-  { name: 'Healthy Fruit Rice Skillet', emoji: '🍚', main: 'Rice', goal: 'Family Meal', ingredients: ['rice', 'fruit', 'cinnamon', 'honey', 'cardamom', 'butter'], image: '', calories: 350, protein: 8, fat: 7, carbs: 62, time: '' },
 ];
 
 const goalOptions = ['All', 'Weight Loss', 'Weight Gain', 'Family Meal', 'Quick Snack', 'Less Oil', 'Easy to Make'];
 const mainOptions = ['All', 'Egg', 'Chicken', 'Milk', 'Rice', 'Fruit'];
 
 function filterRecipes(recipes, ingredientFilter, goalFilter, mainFilter) {
-  let filtered = recipes;
-  // Special logic: if ingredientFilter is a single main ingredient, show all recipes for that main
+  // If searching by a single main ingredient, return recipes in the user's specified order for that main
   if (ingredientFilter.length === 1) {
     const mainMap = {
       egg: 'Egg',
@@ -57,12 +53,14 @@ function filterRecipes(recipes, ingredientFilter, goalFilter, mainFilter) {
     };
     const mainKey = ingredientFilter[0].toLowerCase();
     if (mainMap[mainKey]) {
-      filtered = recipes.filter(r => r.main === mainMap[mainKey] || r.ingredients.map(i => i.toLowerCase()).includes(mainKey));
-    } else {
-      filtered = recipes.filter(r => ingredientFilter.every(i => r.ingredients.map(ing => ing.toLowerCase()).includes(i)));
+      // Return recipes for that main in the order they appear in the array
+      return recipes.filter(r => r.main === mainMap[mainKey]);
     }
-  } else if (ingredientFilter.length > 0) {
-    filtered = recipes.filter(r => ingredientFilter.every(i => r.ingredients.map(ing => ing.toLowerCase()).includes(i)));
+  }
+  // Otherwise, use the existing ingredient filter logic
+  let filtered = recipes;
+  if (ingredientFilter.length > 0) {
+    filtered = filtered.filter(r => ingredientFilter.every(i => r.ingredients.map(ing => ing.toLowerCase()).includes(i)));
   }
   // Filtering logic: intersection or single filter
   if (goalFilter !== 'All' && mainFilter !== 'All') {
