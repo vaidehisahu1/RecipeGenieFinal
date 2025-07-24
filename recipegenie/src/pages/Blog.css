@@ -1,4 +1,4 @@
-/* Foody Light Aesthetic for Blog Page */
+
 
 .blog-page {
   background: var(--color-bg);
@@ -21,7 +21,6 @@
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
   background-clip: unset;
-  text-fill-color: unset;
   filter: none;
 }
 .neon-text {

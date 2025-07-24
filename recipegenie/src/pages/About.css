@@ -1,4 +1,4 @@
-/* Foody Light Aesthetic for About Page */
+
 
 .about-page {
   background: var(--color-bg);
@@ -7,7 +7,7 @@
   padding-bottom: 3rem;
 }
 
-/* Hero Section */
+
 .about-hero {
   text-align: center;
   padding: 3rem 1rem 2rem 1rem;
@@ -36,7 +36,7 @@
   max-width: 700px;
 }
 
-/* Journey Timeline */
+
 .about-journey {
   margin: 3rem auto 2rem auto;
   max-width: 1200px;
@@ -96,7 +96,7 @@
   font-size: 1rem;
 }
 
-/* Mission & Vision */
+
 .about-mission-vision {
   display: flex;
   flex-wrap: wrap;

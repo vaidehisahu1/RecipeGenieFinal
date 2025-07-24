@@ -116,7 +116,7 @@ export default function Services() {
         </div>
       </header>
       <div className="services-page">
-        {/* Hero Banner */}
+        
         <section className="services-hero">
           <h1>
             Comprehensive Health Services <span className="neon-text">Powered by AI</span>
@@ -126,7 +126,7 @@ export default function Services() {
           </p>
         </section>
 
-        {/* Features Grid */}
+     
         <div className="services-features-grid">
           {features.map((feature) => (
             <div className="services-feature-card" key={feature.name}>
@@ -147,7 +147,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* FAQ Section */}
+      
         <section className="services-faq-section">
           <h2>Frequently Asked Questions</h2>
           <p className="faq-sub">Get answers to common questions about our services</p>
@@ -174,7 +174,7 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Call to Action */}
+       
         <section className="services-cta">
           <h2>Ready to Transform Your Health?</h2>
           <p>Join thousands of users who have already started their journey to better health with RecipeGenie</p>

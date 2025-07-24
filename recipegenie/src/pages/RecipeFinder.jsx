@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './FeaturePages.css';
 
 const recipes = [
-  // 🥚 Egg-Based Recipes
+ 
   { name: 'Zesty Egg Bowl', emoji: '🥚', main: 'Egg', goal: 'Weight Loss', ingredients: ['egg', 'spinach', 'garlic', 'tomato', 'onion', 'mint'], image: 'https://st.depositphotos.com/49005766/54975/i/450/depositphotos_549754736-stock-photo-egg-roast-indian-egg-masala.jpg', calories: 340, protein: 23, fat: 8, carbs: 44, time: '' },
   { name: 'Creamy Egg Wrap', emoji: '🥚', main: 'Egg', goal: 'Weight Gain', ingredients: ['egg', 'cheese', 'mayo', 'bread', 'tomato', 'onion'], image: 'https://5.imimg.com/data5/FW/NF/GLADMIN-48797912/egg-wrap.jpg', calories: 350, protein: 20, fat: 15, carbs: 30, time: '' },
   { name: 'Creamy Egg Curry', emoji: '🥚', main: 'Egg', goal: 'Family Meal', ingredients: ['egg', 'onion', 'tomato', 'cream', 'ginger', 'garlic'], image: 'https://www.licious.in/blog/wp-content/uploads/2022/11/Shutterstock_15487581922.jpg', calories: 300, protein: 15, fat: 20, carbs: 15, time: '' },
@@ -13,7 +13,7 @@ const recipes = [
   { name: 'Simple Egg Toast', emoji: '🥚', main: 'Egg', goal: 'Easy to Make', ingredients: ['egg', 'bread', 'butter', 'salt', 'pepper', 'tomato'], image: 'https://i.pinimg.com/736x/b7/6f/90/b76f902d8f5da665a9e891bb6ceca965.jpg', calories: 200, protein: 12, fat: 16, carbs: 10, time: '' },
   { name: 'Rice and Egg Bowl', emoji: '🥚', main: 'Egg', goal: 'Easy to Make', ingredients: ['rice', 'egg', 'onion', 'chili', 'tomato', 'coriander'], image: 'https://media.istockphoto.com/id/627794904/photo/breakfast-fried-egg-with-rice.jpg?s=612x612&w=0&k=20&c=Mjc84YWx6QKBssvWlloNIo8F0aru7Rpeq4m-IyS4kus=', calories: 500, protein: 18, fat: 15, carbs: 70, time: '' },
 
-  // 🍗 Chicken-Based Recipes
+
   { name: 'Spicy Chicken Salad', emoji: '🍗', main: 'Chicken', goal: 'Weight Loss', ingredients: ['chicken', 'lettuce', 'tomato', 'onion', 'lemon juice', 'pepper'], image: 'https://c4.wallpaperflare.com/wallpaper/531/514/362/tropical-chicken-salad-4k-background-wallpaper-preview.jpg', calories: 320, protein: 30, fat: 12, carbs: 10, time: '' },
   { name: 'Grilled Chicken Curry', emoji: '🍗', main: 'Chicken', goal: 'Weight Gain', ingredients: ['chicken', 'butter', 'tomato', 'ginger', 'garlic', 'cream'], image: 'https://i.pinimg.com/736x/15/17/03/15170334f194e31bab1d620ea0906de1.jpg', calories: 400, protein: 28, fat: 18, carbs: 20, time: '' },
   { name: 'Spicy Chicken Rice Bowl', emoji: '🍗', main: 'Chicken', goal: 'Family Meal', ingredients: ['chicken', 'rice', 'onion', 'garlic', 'tomato', 'curd'], image: 'https://shredhappens.com/wp-content/uploads/2024/07/spicy-chicken-rice-bowls-featured.jpg', calories: 520, protein: 27, fat: 16, carbs: 55, time: '' },
@@ -21,18 +21,18 @@ const recipes = [
   { name: 'Minimal Chicken Stir-fry', emoji: '🍗', main: 'Chicken', goal: 'Less Oil', ingredients: ['chicken', 'capsicum', 'garlic', 'ginger', 'chili', 'lemon juice'], image: 'https://www.familyfoodonthetable.com/wp-content/uploads/2015/08/Stir-fry-dinner.png', calories: 280, protein: 24, fat: 10, carbs: 15, time: '' },
   { name: 'Basic Chicken Skillet', emoji: '🍗', main: 'Chicken', goal: 'Easy to Make', ingredients: ['chicken', 'onion', 'garlic', 'tomato', 'oil', 'salt'], image: 'https://www.budgetbytes.com/wp-content/uploads/2021/12/Chicken-Breast-Pan.jpg', calories: 300, protein: 26, fat: 12, carbs: 18, time: '' },
 
-  // 🥛 Milk-Based Recipes
+ 
   { name: 'Creamy Milk Smoothie', emoji: '🥛', main: 'Milk', goal: 'Weight Gain', ingredients: ['milk', 'banana', 'peanut butter', 'honey', 'curd', 'cardamom'], image: 'https://brunchandbatter.com/wp-content/uploads/2025/04/banana-date-smoothie-3.jpg', calories: 350, protein: 14, fat: 12, carbs: 42, time: '' },
   { name: 'Sweet Rice Delight', emoji: '🥛', main: 'Milk', goal: 'Weight Gain', ingredients: ['rice', 'milk', 'dry fruits', 'sugar', 'cardamom', 'ghee'], image: 'https://odiafoods.in/wp-content/uploads/2023/08/kanika_serving.jpg', calories: 320, protein: 10, fat: 10, carbs: 50, time: '' },
   { name: 'Healthy Milk Salad', emoji: '🥛', main: 'Milk', goal: 'Quick Snack', ingredients: ['milk', 'salt', 'onion', 'pepper', 'curd', 'cheese'], image: 'https://i.pinimg.com/736x/1d/aa/c3/1daac3b0c80585ab32460f20aaba8f66.jpg', calories: 260, protein: 12, fat: 10, carbs: 20, time: '' },
   { name: 'Sweet Milk Porridge', emoji: '🥛', main: 'Milk', goal: 'Easy to Make', ingredients: ['milk', 'oats', 'sugar', 'dry fruits', 'cardamom', 'cinnamon'], image: 'https://www.cadburydessertscorner.com/hs-fs/hubfs/dc-website-2022/articles/delicious-breakfast-ideas-exploring-the-delights-of-condensed-milk-porridge/condensed-milk-porridge-feature.webp?width=768&height=432&name=condensed-milk-porridge-feature.webp', calories: 290, protein: 11, fat: 9, carbs: 45, time: '' },
 
-  // 🍚 Rice-Based Recipes
+  
   { name: 'Healthy Rice Delight', emoji: '🍚', main: 'Rice', goal: 'Weight Loss', ingredients: ['rice', 'capsicum', 'carrot', 'lemon juice', 'onion', 'chili'], image: 'https://i0.wp.com/s.lightorangebean.com/media/20240914154141/Mixed-Veg-Rice-Delight_-done-1.png?fit=1376%2C864&quality=80&ssl=1', calories: 310, protein: 9, fat: 6, carbs: 58, time: '' },
   { name: 'Healthy Fruit Rice Skillet', emoji: '🍚', main: 'Rice', goal: 'Family Meal', ingredients: ['rice', 'fruit', 'cinnamon', 'honey', 'cardamom', 'butter'], image: 'https://cdn.loveandlemons.com/wp-content/uploads/2020/03/rice-recipes.jpg', calories: 350, protein: 8, fat: 7, carbs: 62, time: '' },
   { name: 'Steamed Rice Bites', emoji: '🍚', main: 'Rice', goal: 'Less Oil', ingredients: ['rice', 'curd', 'ginger', 'mustard seeds', 'green chili', 'lemon juice'], image: 'https://i.ytimg.com/vi/aYVcpbCxsew/maxresdefault.jpg', calories: 250, protein: 6, fat: 4, carbs: 48, time: '' },
 
-  // 🍎 Fruit-Based Recipes
+ 
   { name: 'Creamy Fruit Salad', emoji: '🍓', main: 'Fruit', goal: 'Weight Loss', ingredients: ['fruit', 'curd', 'mint', 'honey', 'cinnamon', 'cardamom'], image: 'https://www.simplystacie.net/wp-content/uploads/2017/08/Creamy-Fruit-Salad-7.jpg', calories: 270, protein: 6, fat: 12, carbs: 35, time: '' },
   { name: 'Fruit Yogurt Mix', emoji: '🍓', main: 'Fruit', goal: 'Easy to Make', ingredients: ['fruit', 'curd', 'honey', 'mint', 'cinnamon', 'cardamom'], image: 'https://www.yumiiyogurt.com/en/wp-content/uploads/sites/2/2017/07/Mixed-fruit-with-yogurt-topping-4.jpg', calories: 240, protein: 8, fat: 8, carbs: 32, time: '' },
 ];
@@ -41,7 +41,7 @@ const goalOptions = ['All', 'Weight Loss', 'Weight Gain', 'Family Meal', 'Quick 
 const mainOptions = ['All', 'Egg', 'Chicken', 'Milk', 'Rice', 'Fruit'];
 
 function filterRecipes(recipes, ingredientFilter, goalFilter, mainFilter) {
-  // If searching by a single main ingredient, return recipes in the user's specified order for that main
+
   if (ingredientFilter.length === 1) {
     const mainMap = {
       egg: 'Egg',
@@ -53,16 +53,16 @@ function filterRecipes(recipes, ingredientFilter, goalFilter, mainFilter) {
     };
     const mainKey = ingredientFilter[0].toLowerCase();
     if (mainMap[mainKey]) {
-      // Return recipes for that main in the order they appear in the array
+     
       return recipes.filter(r => r.main === mainMap[mainKey]);
     }
   }
-  // Otherwise, use the existing ingredient filter logic
+ 
   let filtered = recipes;
   if (ingredientFilter.length > 0) {
     filtered = filtered.filter(r => ingredientFilter.every(i => r.ingredients.map(ing => ing.toLowerCase()).includes(i)));
   }
-  // Filtering logic: intersection or single filter
+ 
   if (goalFilter !== 'All' && mainFilter !== 'All') {
     filtered = filtered.filter(r => r.goal === goalFilter && r.main === mainFilter);
   } else if (goalFilter !== 'All') {
@@ -121,7 +121,7 @@ export default function RecipeFinder() {
         </div>
       </header>
 
-      {/* Main Content */}
+    
       <section className="feature-hero">
         <h1 className="feature-title neon-green">Recipe Finder</h1>
         <p className="feature-sub">Discover recipes based on your ingredients or dietary goals</p>
@@ -171,7 +171,7 @@ export default function RecipeFinder() {
           </div>
         ))}
       </div>
-      {/* Footer */}
+     
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-brand">

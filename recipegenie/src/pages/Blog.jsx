@@ -163,7 +163,7 @@ const blogData = {
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  // Gather all blogs for 'All' category
+
   const allBlogs = Object.values(blogData).flat();
   const blogsToShow = selectedCategory === 'All' ? allBlogs : blogData[selectedCategory];
 
@@ -186,14 +186,14 @@ export default function Blog() {
         </div>
       </header>
       <div className="blog-page">
-        {/* Blog Hero */}
+  
         <section className="blog-hero">
           <h1 style={{ fontSize: '2.5em', color: 'var(--color-accent2)', marginBottom: 8 }}>🍽️ Smart Eating Made Simple</h1>
           <p className="blog-hero-sub" style={{ fontSize: '1.2em', color: 'var(--color-text)' }}>
             AI-driven food advice, smart tips, and recipe science—all in one place. Discover how technology meets taste with RecipeGenie.
           </p>
         </section>
-        {/* Filter Bar */}
+     
         <div className="blog-filter-bar">
           {categories.map((cat) => (
             <button
@@ -205,7 +205,7 @@ export default function Blog() {
             </button>
           ))}
         </div>
-        {/* Article Grid */}
+        
         <div className="blog-articles-grid">
           {blogsToShow.map((blog, idx) => (
             <div className="blog-article-card" key={blog.title + idx}>

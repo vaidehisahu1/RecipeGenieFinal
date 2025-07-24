@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import './FeaturePages.css';
 
 function groupIngredients(ingredients) {
-  // Group and dedupe, count occurrences
+  
   const map = {};
   ingredients.forEach((item) => {
     const key = item.trim().toLowerCase();
@@ -30,7 +30,7 @@ export default function GroceryList() {
   const todaysMeals = JSON.parse(localStorage.getItem('todaysMeals') || '[]');
   const allChecked = items.length > 0 && items.every(item => checked[item.name]);
 
-  // When all are checked, mark meal as completed in localStorage
+ 
   useEffect(() => {
     if (allChecked && todaysMeals.length > 0) {
       localStorage.setItem('todaysMealsCompleted', 'true');
@@ -41,7 +41,7 @@ export default function GroceryList() {
 
   return (
     <div className="feature-page-bg">
-      {/* Navbar */}
+      
       <header className="navbar">
         <div className="navbar-left">
           <span className="logo-icon">&#128717;</span>
@@ -60,7 +60,7 @@ export default function GroceryList() {
         </div>
       </header>
 
-      {/* Main Content */}
+      
       <section className="feature-hero">
         <h1 className="feature-title neon-pink">Shopping List</h1>
         <p className="feature-sub">Check off what you already have, or pick more recipes!</p>
@@ -101,7 +101,7 @@ export default function GroceryList() {
           </div>
         )}
       </div>
-      {/* Footer */}
+      
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-brand">

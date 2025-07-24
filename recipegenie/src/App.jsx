@@ -14,7 +14,7 @@ import Signup from './pages/Signup';
 function App() {
   return (
     <Router>
-      {/* Main content area for routing */}
+     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

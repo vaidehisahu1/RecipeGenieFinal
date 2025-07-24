@@ -53,12 +53,12 @@ export default function ProgressTracker() {
   const [selectedFood, setSelectedFood] = useState('');
   const [selectedMeal, setSelectedMeal] = useState('Breakfast');
 
-  // If user comes from GroceryList with a completed meal, pre-select that recipe and prompt for meal type before adding
+
   useEffect(() => {
     const completed = localStorage.getItem('todaysMealsCompleted') === 'true';
     const todaysMeals = JSON.parse(localStorage.getItem('todaysMeals') || '[]');
     if (completed && todaysMeals.length > 0) {
-      // Only add if not already present
+     
       setMeals((prev) => {
         const names = prev.map(m => m.name);
         const toAdd = todaysMeals.filter(m => !names.includes(m.name));
@@ -68,7 +68,7 @@ export default function ProgressTracker() {
     }
   }, []);
 
-  // Calculate totals
+ 
   const totals = meals.reduce(
     (acc, m) => {
       acc.calories += m.calories;
@@ -80,7 +80,7 @@ export default function ProgressTracker() {
     { calories: 0, protein: 0, carbs: 0, fat: 0 }
   );
 
-  // Add meal from dropdown
+  
   const addMeal = () => {
     const food = foodOptions.find(f => f.name === selectedFood);
     if (!food) return;
@@ -90,14 +90,14 @@ export default function ProgressTracker() {
   };
   const removeMeal = (idx) => setMeals(meals.filter((_, i) => i !== idx));
 
-  // Weekly summary reflects dummy data + current daily
+  
   const weeklySummary = {
     ...weeklyBase,
     avgCalories: Math.round((weeklyBase.avgCalories * 6 + totals.calories) / 7),
     daysOnTrack: weeklyBase.daysOnTrack + (totals.calories > 0 ? 1 : 0),
   };
 
-  // Achievements grid (same for both views)
+  
   function AchievementsGrid() {
     return (
       <div className="achievements-section">
@@ -117,7 +117,7 @@ export default function ProgressTracker() {
 
   return (
     <div className="feature-page-bg">
-      {/* Navbar */}
+     
       <header className="navbar">
         <div className="navbar-left">
           <span className="logo-icon">&#128717;</span>
@@ -136,7 +136,7 @@ export default function ProgressTracker() {
         </div>
       </header>
 
-      {/* Main Content */}
+      
       <section className="feature-hero">
         <h1 className="feature-title neon-green">My Progress</h1>
         <p className="feature-sub">Track your nutrition journey and celebrate your achievements</p>
@@ -248,7 +248,7 @@ export default function ProgressTracker() {
         </>
       )}
 
-      {/* Footer */}
+    
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-brand">

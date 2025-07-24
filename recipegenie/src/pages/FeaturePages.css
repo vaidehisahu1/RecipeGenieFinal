@@ -1,4 +1,3 @@
-/* Foody color palette, original layout/structure */
 
 .feature-page-bg {
   background: var(--color-bg);
@@ -292,7 +291,7 @@
   justify-content: center;
 }
 
-/* Progress Tracker Styles */
+
 .progress-summary-row {
   display: flex;
   gap: 2em;

@@ -10,13 +10,13 @@ export default function WaterIntakeTracker() {
   const [goal, setGoal] = useState(2000);
   const [intake, setIntake] = useState(0);
 
-  // Update goal instantly
+
   const handleGoalChange = (delta) => {
     setGoal((prev) => {
       let next = prev + delta;
       if (next < MIN_GOAL) next = MIN_GOAL;
       if (next > MAX_GOAL) next = MAX_GOAL;
-      // If intake > new goal, clamp intake
+     
       setIntake((intakePrev) => Math.min(intakePrev, next));
       return next;
     });
@@ -40,7 +40,7 @@ export default function WaterIntakeTracker() {
 
   return (
     <div className="feature-page-bg">
-      {/* Navbar */}
+      
       <header className="navbar">
         <div className="navbar-left">
           <span className="logo-icon">&#128717;</span>
@@ -96,7 +96,7 @@ export default function WaterIntakeTracker() {
           <button className="feature-btn-outline danger" onClick={resetToday}>Reset Today</button>
         </div>
       </div>
-      {/* Footer */}
+   
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-brand">
